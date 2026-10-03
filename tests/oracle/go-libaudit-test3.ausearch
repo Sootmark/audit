@@ -1,0 +1,27 @@
+----
+type=PROCTITLE msg=audit(01/03/16 00:37:51.394:194433) : proctitle=bash 
+type=SYSCALL msg=audit(01/03/16 00:37:51.394:194433) : arch=x86_64 syscall=rt_sigaction success=yes exit=0 a0=SIGSEGV a1=0x7ffd42eb1590 a2=0x0 a3=0x8 items=0 ppid=1306 pid=1321 auid=unknown(1000) uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts0 ses=1 comm=bash exe=/usr/bin/bash subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key=(null) 
+----
+type=PROCTITLE msg=audit(01/03/16 00:37:51.394:194435) : proctitle=sshd: burn [priv] 
+type=SYSCALL msg=audit(01/03/16 00:37:51.394:194435) : arch=x86_64 syscall=select success=yes exit=1 a0=0xc a1=0x56420184ade0 a2=0x564201867510 a3=0x0 items=0 ppid=1271 pid=1281 auid=unknown(1000) uid=unknown(1000) gid=unknown(1000) euid=unknown(1000) suid=unknown(1000) fsuid=unknown(1000) egid=unknown(1000) sgid=unknown(1000) fsgid=unknown(1000) tty=(none) ses=1 comm=sshd exe=/usr/sbin/sshd subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key=(null) 
+----
+type=PROCTITLE msg=audit(01/03/16 00:37:51.394:194436) : proctitle=bash 
+type=SYSCALL msg=audit(01/03/16 00:37:51.394:194436) : arch=x86_64 syscall=rt_sigaction success=yes exit=0 a0=SIGSYS a1=0x7ffd42eb1590 a2=0x0 a3=0x8 items=0 ppid=1306 pid=1321 auid=unknown(1000) uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts0 ses=1 comm=bash exe=/usr/bin/bash subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key=(null) 
+----
+type=PROCTITLE msg=audit(01/03/16 00:37:51.394:194437) : proctitle=sshd: burn [priv] 
+type=SYSCALL msg=audit(01/03/16 00:37:51.394:194437) : arch=x86_64 syscall=rt_sigprocmask success=yes exit=0 a0=0x0 a1=0x7ffdac6fe9a0 a2=0x7ffdac6fe920 a3=0x8 items=0 ppid=1271 pid=1281 auid=unknown(1000) uid=unknown(1000) gid=unknown(1000) euid=unknown(1000) suid=unknown(1000) fsuid=unknown(1000) egid=unknown(1000) sgid=unknown(1000) fsgid=unknown(1000) tty=(none) ses=1 comm=sshd exe=/usr/sbin/sshd subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key=(null) 
+----
+type=PROCTITLE msg=audit(01/03/16 00:37:51.394:194438) : proctitle=bash 
+type=SYSCALL msg=audit(01/03/16 00:37:51.394:194438) : arch=x86_64 syscall=rt_sigaction success=yes exit=0 a0=SIGPIPE a1=0x7ffd42eb1590 a2=0x0 a3=0x8 items=0 ppid=1306 pid=1321 auid=unknown(1000) uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts0 ses=1 comm=bash exe=/usr/bin/bash subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key=(null) 
+----
+type=PROCTITLE msg=audit(01/03/16 00:37:51.394:194439) : proctitle=sshd: burn [priv] 
+type=SYSCALL msg=audit(01/03/16 00:37:51.394:194439) : arch=x86_64 syscall=rt_sigprocmask success=yes exit=0 a0=0x2 a1=0x7ffdac6fe920 a2=0x0 a3=0x8 items=0 ppid=1271 pid=1281 auid=unknown(1000) uid=unknown(1000) gid=unknown(1000) euid=unknown(1000) suid=unknown(1000) fsuid=unknown(1000) egid=unknown(1000) sgid=unknown(1000) fsgid=unknown(1000) tty=(none) ses=1 comm=sshd exe=/usr/sbin/sshd subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key=(null) 
+----
+type=PROCTITLE msg=audit(01/03/16 00:37:51.394:194440) : proctitle=sshd: burn [priv] 
+type=SYSCALL msg=audit(01/03/16 00:37:51.394:194440) : arch=x86_64 syscall=clock_gettime success=yes exit=0 a0=0x7 a1=0x7ffdac6fe9c0 a2=0x564201867510 a3=0x8 items=0 ppid=1271 pid=1281 auid=unknown(1000) uid=unknown(1000) gid=unknown(1000) euid=unknown(1000) suid=unknown(1000) fsuid=unknown(1000) egid=unknown(1000) sgid=unknown(1000) fsgid=unknown(1000) tty=(none) ses=1 comm=sshd exe=/usr/sbin/sshd subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key=(null) 
+----
+type=ADD_GROUP msg=audit(01/03/16 00:37:51.602:194894) : pid=1321 uid=root auid=unknown(1000) ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=add-group acct=frodo exe=/usr/sbin/useradd hostname=? addr=? terminal=pts/0 res=success' 
+----
+type=SECCOMP msg=audit(06/08/15 17:48:47.186:10262) : auid=unknown(20003) uid=unknown(22) gid=voice ses=21 pid=11217 comm=sshd exe=/usr/sbin/sshd sig=SIGSYS arch=i386 syscall=getpgid compat=0 ip=0xb7670aac code=kill-thread 
+----
+type=EXECVE msg=audit(10/06/17 15:40:39.922:1865) : argc=5 a0=useradd a1=-u a2=3005 a3=-m a4=trainer5 

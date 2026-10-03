@@ -1,0 +1,2 @@
+----
+type=PATH msg=audit(03/22/18 22:40:53.536:1428931) : item=0 name=/share/general/path_redacted inode=1442434 dev=fc:01 mode=dir,sgid,775 ouid=unknown(10067) ogid=unknown(7003) rdev=00:00 nametype=NORMAL 

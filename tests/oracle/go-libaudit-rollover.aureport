@@ -1,0 +1,95 @@
+### aureport --summary
+
+Summary Report
+======================
+Range of time in logs: 04/12/17 22:48:09.295 - 04/12/17 22:48:18.884
+Selected time for report: 04/12/17 22:48:09 - 04/12/17 22:48:18.884
+Number of changes in configuration: 0
+Number of changes to accounts, groups, or roles: 0
+Number of logins: 0
+Number of failed logins: 0
+Number of authentications: 0
+Number of failed authentications: 0
+Number of users: 2
+Number of terminals: 2
+Number of host names: 0
+Number of executables: 4
+Number of commands: 4
+Number of files: 0
+Number of AVC's: 0
+Number of MAC events: 0
+Number of failed syscalls: 1
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 0
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 1
+Number of process IDs: 4
+Number of events: 5
+
+### aureport --login
+
+Login Report
+============================================
+# date time auid host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --auth
+
+Authentication Report
+============================================
+# date time acct host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --mods
+
+Account Modifications Report
+=================================================
+# date time auid addr term exe acct success event
+=================================================
+<no events of interest were found>
+
+### aureport --executable
+
+Executable Report
+====================================
+# date time exe term host auid event
+====================================
+1. 04/12/17 22:48:09 /usr/bin/python2.7;58d1ccfb (deleted) (none) ? unset 4294967294
+2. 04/12/17 22:48:18 /usr/libexec/postfix/master (none) ? unset 0
+3. 04/12/17 22:48:18 /usr/libexec/postfix/pickup (none) ? unset 1
+4. 04/12/17 22:48:18 /usr/bin/cat pts1 ? unknown(1000) 4294967295
+5. 04/12/17 22:48:18 /usr/libexec/postfix/pickup (none) ? unset 2
+### aureport --syscall
+
+Syscall Report
+=======================================
+# date time syscall pid comm auid event
+=======================================
+1. 04/12/17 22:48:09 connect 1172 google_accounts unset 4294967294
+2. 04/12/17 22:48:18 connect 1229 master unset 0
+3. 04/12/17 22:48:18 accept 12992 pickup unset 1
+4. 04/12/17 22:48:18 execve 13392 cat unknown(1000) 4294967295
+5. 04/12/17 22:48:18 accept 12992 pickup unset 2
+### aureport --comm
+
+Command Report
+====================================
+# date time comm term host auid event
+=====================================
+1. 04/12/17 22:48:09 google_accounts (none) ? unset 4294967294
+2. 04/12/17 22:48:18 master (none) ? unset 0
+3. 04/12/17 22:48:18 pickup (none) ? unset 1
+4. 04/12/17 22:48:18 cat pts1 ? unknown(1000) 4294967295
+5. 04/12/17 22:48:18 pickup (none) ? unset 2
+### aureport --host
+
+Host Report
+===================================
+# date time host syscall auid event
+===================================
+<no events of interest were found>
+

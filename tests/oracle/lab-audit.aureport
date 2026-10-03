@@ -1,0 +1,1371 @@
+### aureport --summary
+
+Summary Report
+======================
+Range of time in logs: 10/03/26 20:47:31.991 - 10/03/26 20:47:40.689
+Selected time for report: 10/03/26 20:47:31 - 10/03/26 20:47:40.689
+Number of changes in configuration: 10
+Number of changes to accounts, groups, or roles: 20
+Number of logins: 1
+Number of failed logins: 2
+Number of authentications: 0
+Number of failed authentications: 0
+Number of users: 4
+Number of terminals: 6
+Number of host names: 3
+Number of executables: 39
+Number of commands: 43
+Number of files: 63
+Number of AVC's: 0
+Number of MAC events: 0
+Number of failed syscalls: 133
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 0
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 5
+Number of process IDs: 113
+Number of events: 489
+
+### aureport --login
+
+Login Report
+============================================
+# date time auid host term exe success event
+============================================
+1. 10/03/26 20:47:34 sootmarktest 127.0.0.1 /dev/pts/11 /usr/lib/openssh/sshd-session yes 32260
+2. 10/03/26 20:47:34 (invalid user) 127.0.0.1 sshd /usr/lib/openssh/sshd-session no 32277
+3. 10/03/26 20:47:34 (invalid user) 127.0.0.1 sshd /usr/lib/openssh/sshd-session no 32278
+### aureport --auth
+
+Authentication Report
+============================================
+# date time acct host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --mods
+
+Account Modifications Report
+=================================================
+# date time auid addr term exe acct success event
+=================================================
+1. 10/03/26 20:47:34 analyst ? ? /usr/sbin/groupadd ? yes 31967
+2. 10/03/26 20:47:34 analyst ? ? /usr/sbin/groupadd ? yes 31969
+3. 10/03/26 20:47:34 analyst ? ? /usr/sbin/useradd sootmarktest yes 32003
+4. 10/03/26 20:47:34 analyst ? ? /usr/sbin/useradd sootmarktest yes 32007
+5. 10/03/26 20:47:34 analyst ? ? /usr/sbin/useradd sootmarktest yes 32008
+6. 10/03/26 20:47:34 analyst ? ? /usr/sbin/useradd sootmarktest yes 32009
+7. 10/03/26 20:47:34 analyst ? ? /usr/sbin/useradd ? yes 32016
+8. 10/03/26 20:47:34 analyst ? ? /usr/sbin/chpasswd sootmarktest yes 32048
+9. 10/03/26 20:47:34 analyst ? ? /usr/sbin/usermod sootmarktest yes 32074
+10. 10/03/26 20:47:34 analyst ? ? /usr/sbin/usermod sootmarktest yes 32076
+11. 10/03/26 20:47:38 unset ? ? /usr/sbin/userdel ? yes 32334
+12. 10/03/26 20:47:38 unset ? ? /usr/sbin/userdel ? yes 32335
+13. 10/03/26 20:47:38 unset ? ? /usr/sbin/userdel ? yes 32336
+14. 10/03/26 20:47:38 unset ? ? /usr/sbin/userdel sootmarktest yes 32337
+15. 10/03/26 20:47:38 unset ? ? /usr/sbin/userdel sootmarktest yes 32338
+16. 10/03/26 20:47:38 unset ? ? /usr/sbin/userdel ? yes 32339
+17. 10/03/26 20:47:38 unset ? ? /usr/sbin/userdel ? yes 32340
+18. 10/03/26 20:47:38 unset ? ? /usr/sbin/userdel ? yes 32341
+19. 10/03/26 20:47:38 unset ? ? /usr/sbin/groupdel ? yes 32350
+20. 10/03/26 20:47:38 unset ? ? /usr/sbin/groupdel ? yes 32351
+### aureport --executable
+
+Executable Report
+====================================
+# date time exe term host auid event
+====================================
+1. 10/03/26 20:47:31 /usr/bin/sudo ? ? unset 31881
+2. 10/03/26 20:47:31 /usr/bin/sudo ? ? unset 31882
+3. 10/03/26 20:47:32 /usr/bin/sudo ? ? unset 31883
+4. 10/03/26 20:47:32 /usr/bin/sudo ? ? unset 31884
+5. 10/03/26 20:47:32 /usr/bin/sudo ? ? unset 31885
+6. 10/03/26 20:47:32 /usr/bin/sudo ? ? unset 31886
+7. 10/03/26 20:47:32 /usr/sbin/auditctl (none) ? unset 31887
+8. 10/03/26 20:47:32 /usr/bin/sudo ? ? unset 31888
+9. 10/03/26 20:47:32 /usr/bin/sudo ? ? unset 31889
+10. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31890
+11. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31891
+12. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31892
+13. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31893
+14. 10/03/26 20:47:33 /usr/sbin/auditctl (none) ? unset 31894
+15. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31895
+16. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31896
+17. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31897
+18. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31898
+19. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31899
+20. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31900
+21. 10/03/26 20:47:33 /usr/sbin/auditctl (none) ? unset 31901
+22. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31902
+23. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31903
+24. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31904
+25. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31905
+26. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31906
+27. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31907
+28. 10/03/26 20:47:33 /usr/sbin/auditctl (none) ? unset 31908
+29. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31909
+30. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31910
+31. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31911
+32. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31912
+33. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31913
+34. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31914
+35. 10/03/26 20:47:33 /usr/sbin/auditctl (none) ? unset 31915
+36. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31916
+37. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31917
+38. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31918
+39. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31919
+40. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31920
+41. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31921
+42. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31922
+43. 10/03/26 20:47:33 /usr/bin/sudo ? ? unset 31923
+44. 10/03/26 20:47:34 /usr/bin/sudo ? ? unset 31924
+45. 10/03/26 20:47:34 /usr/bin/sudo ? ? unset 31925
+46. 10/03/26 20:47:34 /usr/bin/sudo ? ? unset 31926
+47. 10/03/26 20:47:34 /usr/bin/sudo ? ? unset 31927
+48. 10/03/26 20:47:34 /usr/bin/bash (none) ? unknown(1000) 31928
+49. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31929
+50. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31930
+51. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31931
+52. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31932
+53. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31933
+54. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31934
+55. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31935
+56. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31936
+57. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 31937
+58. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 31938
+59. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 31939
+60. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31940
+61. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31941
+62. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31942
+63. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31943
+64. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31944
+65. 10/03/26 20:47:34 /usr/bin/bash (none) ? analyst 31945
+66. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31946
+67. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31947
+68. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31948
+69. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31949
+70. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31950
+71. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31951
+72. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31952
+73. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 31953
+74. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 31954
+75. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 31955
+76. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31956
+77. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31957
+78. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31958
+79. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31959
+80. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31960
+81. 10/03/26 20:47:34 /usr/sbin/groupadd (none) ? analyst 31961
+82. 10/03/26 20:47:34 /usr/sbin/groupadd (none) ? analyst 31962
+83. 10/03/26 20:47:34 /usr/sbin/groupadd (none) ? analyst 31963
+84. 10/03/26 20:47:34 /usr/sbin/groupadd (none) ? analyst 31964
+85. 10/03/26 20:47:34 /usr/sbin/groupadd (none) ? analyst 31965
+86. 10/03/26 20:47:34 /usr/sbin/groupadd (none) ? analyst 31966
+87. 10/03/26 20:47:34 /usr/sbin/groupadd ? ? analyst 31967
+88. 10/03/26 20:47:34 /usr/sbin/groupadd (none) ? analyst 31968
+89. 10/03/26 20:47:34 /usr/sbin/groupadd ? ? analyst 31969
+90. 10/03/26 20:47:34 /usr/sbin/groupadd (none) ? analyst 31970
+91. 10/03/26 20:47:34 /usr/sbin/groupadd (none) ? analyst 31971
+92. 10/03/26 20:47:34 /usr/sbin/groupadd (none) ? analyst 31972
+93. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31973
+94. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31974
+95. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31975
+96. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31976
+97. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31977
+98. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31978
+99. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31979
+100. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31980
+101. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31981
+102. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 31982
+103. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 31983
+104. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 31984
+105. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31985
+106. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 31986
+107. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31987
+108. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31988
+109. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 31989
+110. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 31990
+111. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 31991
+112. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 31992
+113. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 31993
+114. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 31994
+115. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 31995
+116. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 31996
+117. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 31997
+118. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 31998
+119. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 31999
+120. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32000
+121. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32001
+122. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32002
+123. 10/03/26 20:47:34 /usr/sbin/useradd ? ? analyst 32003
+124. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32004
+125. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32005
+126. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32006
+127. 10/03/26 20:47:34 /usr/sbin/useradd ? ? analyst 32007
+128. 10/03/26 20:47:34 /usr/sbin/useradd ? ? analyst 32008
+129. 10/03/26 20:47:34 /usr/sbin/useradd ? ? analyst 32009
+130. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32010
+131. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32011
+132. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32012
+133. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32013
+134. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32014
+135. 10/03/26 20:47:34 /usr/sbin/useradd (none) ? analyst 32015
+136. 10/03/26 20:47:34 /usr/sbin/useradd ? ? analyst 32016
+137. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32017
+138. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32018
+139. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32019
+140. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32020
+141. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32021
+142. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32022
+143. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32023
+144. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32024
+145. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32025
+146. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32026
+147. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32027
+148. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32028
+149. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32029
+150. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32030
+151. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32031
+152. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32032
+153. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32033
+154. 10/03/26 20:47:34 /usr/sbin/chpasswd (none) ? analyst 32034
+155. 10/03/26 20:47:34 /usr/sbin/chpasswd (none) ? analyst 32035
+156. 10/03/26 20:47:34 /usr/sbin/chpasswd (none) ? analyst 32036
+157. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32037
+158. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32038
+159. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32039
+160. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32040
+161. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32041
+162. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32042
+163. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32043
+164. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32044
+165. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32045
+166. 10/03/26 20:47:34 /usr/sbin/chpasswd (none) ? analyst 32046
+167. 10/03/26 20:47:34 /usr/sbin/chpasswd (none) ? analyst 32047
+168. 10/03/26 20:47:34 /usr/sbin/chpasswd ? ? analyst 32048
+169. 10/03/26 20:47:34 /usr/sbin/chpasswd (none) ? analyst 32049
+170. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32050
+171. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32051
+172. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32052
+173. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32053
+174. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32054
+175. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32055
+176. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32056
+177. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32057
+178. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32058
+179. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32059
+180. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32060
+181. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32061
+182. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32062
+183. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32063
+184. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32064
+185. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32065
+186. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32066
+187. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32067
+188. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32068
+189. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32069
+190. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32070
+191. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32071
+192. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32072
+193. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32073
+194. 10/03/26 20:47:34 /usr/sbin/usermod ? ? analyst 32074
+195. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32075
+196. 10/03/26 20:47:34 /usr/sbin/usermod ? ? analyst 32076
+197. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32077
+198. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32078
+199. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32079
+200. 10/03/26 20:47:34 /usr/sbin/usermod (none) ? analyst 32080
+201. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32081
+202. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32082
+203. 10/03/26 20:47:34 /usr/bin/echo (none) ? analyst 32083
+204. 10/03/26 20:47:34 /usr/bin/echo (none) ? analyst 32084
+205. 10/03/26 20:47:34 /usr/bin/head (none) ? analyst 32085
+206. 10/03/26 20:47:34 /usr/bin/tr (none) ? analyst 32086
+207. 10/03/26 20:47:34 /usr/bin/true (none) ? analyst 32087
+208. 10/03/26 20:47:34 /usr/bin/touch (none) ? analyst 32088
+209. 10/03/26 20:47:34 /usr/bin/chmod (none) ? analyst 32089
+210. 10/03/26 20:47:34 /usr/bin/chmod (none) ? analyst 32090
+211. 10/03/26 20:47:34 /usr/bin/mv (none) ? analyst 32091
+212. 10/03/26 20:47:34 /usr/bin/mv (none) ? analyst 32092
+213. 10/03/26 20:47:34 /usr/bin/rm (none) ? analyst 32093
+214. 10/03/26 20:47:34 /usr/bin/rm (none) ? analyst 32094
+215. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32095
+216. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32096
+217. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32097
+218. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32098
+219. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32099
+220. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32100
+221. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32101
+222. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32102
+223. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32103
+224. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32104
+225. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32105
+226. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32106
+227. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32107
+228. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32108
+229. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32109
+230. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32110
+231. 10/03/26 20:47:34 /usr/bin/id (none) ? analyst 32111
+232. 10/03/26 20:47:34 /usr/bin/id (none) ? analyst 32112
+233. 10/03/26 20:47:34 /usr/bin/id (none) ? analyst 32113
+234. 10/03/26 20:47:34 /usr/bin/id (none) ? analyst 32114
+235. 10/03/26 20:47:34 /usr/bin/id (none) ? analyst 32115
+236. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32116
+237. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32117
+238. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32118
+239. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32119
+240. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32120
+241. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32121
+242. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32122
+243. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32123
+244. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32124
+245. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32125
+246. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32126
+247. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32127
+248. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32128
+249. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32129
+250. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32130
+251. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32131
+252. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32132
+253. 10/03/26 20:47:34 /usr/bin/cat (none) ? analyst 32133
+254. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32134
+255. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32135
+256. 10/03/26 20:47:34 /usr/bin/bash (none) ? analyst 32136
+257. 10/03/26 20:47:34 /usr/bin/bash (none) 127.0.0.1 analyst 32137
+258. 10/03/26 20:47:34 /usr/bin/head (none) ? analyst 32138
+259. 10/03/26 20:47:34 /usr/bin/python3.13 (none) ? analyst 32139
+260. 10/03/26 20:47:34 /usr/bin/python3.13 (none) ::1 analyst 32140
+261. 10/03/26 20:47:34 /usr/bin/mktemp (none) ? analyst 32141
+262. 10/03/26 20:47:34 /usr/bin/ssh-keygen (none) ? analyst 32142
+263. 10/03/26 20:47:34 /usr/bin/ssh-keygen (none) ? analyst 32143
+264. 10/03/26 20:47:34 /usr/bin/ssh-keygen (none) ? analyst 32144
+265. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32145
+266. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32146
+267. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32147
+268. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32148
+269. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32149
+270. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32150
+271. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32151
+272. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32152
+273. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32153
+274. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32154
+275. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32155
+276. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32156
+277. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32157
+278. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32158
+279. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32159
+280. 10/03/26 20:47:34 /usr/bin/install (none) ? analyst 32160
+281. 10/03/26 20:47:34 /usr/bin/install (none) ? analyst 32161
+282. 10/03/26 20:47:34 /usr/bin/install (none) ? analyst 32162
+283. 10/03/26 20:47:34 /usr/bin/install (none) ? analyst 32163
+284. 10/03/26 20:47:34 /usr/bin/install (none) ? analyst 32164
+285. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32165
+286. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32166
+287. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32167
+288. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32168
+289. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32169
+290. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32170
+291. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32171
+292. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32172
+293. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32173
+294. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32174
+295. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32175
+296. 10/03/26 20:47:34 /usr/sbin/unix_chkpwd (none) ? analyst 32176
+297. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32177
+298. 10/03/26 20:47:34 /usr/bin/sudo (none) ? analyst 32178
+299. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32179
+300. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32180
+301. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32181
+302. 10/03/26 20:47:34 /usr/bin/install (none) ? analyst 32182
+303. 10/03/26 20:47:34 /usr/bin/install (none) ? analyst 32183
+304. 10/03/26 20:47:34 /usr/bin/install (none) ? analyst 32184
+305. 10/03/26 20:47:34 /usr/bin/install (none) ? analyst 32185
+306. 10/03/26 20:47:34 /usr/bin/install (none) ? analyst 32186
+307. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32187
+308. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32188
+309. 10/03/26 20:47:34 /usr/bin/ssh (none) ? analyst 32189
+310. 10/03/26 20:47:34 /usr/bin/ssh (none) ? analyst 32190
+311. 10/03/26 20:47:34 /usr/bin/ssh (none) ? analyst 32191
+312. 10/03/26 20:47:34 /usr/bin/ssh (none) 127.0.0.1 analyst 32192
+313. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session ssh 127.0.0.1 unset 32193
+314. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session ssh 127.0.0.1 unset 32194
+315. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? unknown(1001) 32195
+316. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? sootmarktest 32196
+317. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? sootmarktest 32197
+318. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? sootmarktest 32198
+319. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? sootmarktest 32199
+320. 10/03/26 20:47:34 /usr/lib/systemd/systemd ? ? unset 32200
+321. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor ? ? unset 32201
+322. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor ? ? unset 32202
+323. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? unknown(1001) 32203
+324. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32204
+325. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32205
+326. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32206
+327. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32207
+328. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor ? ? sootmarktest 32208
+329. 10/03/26 20:47:34 /usr/lib/systemd/systemd (none) ? sootmarktest 32209
+330. 10/03/26 20:47:34 /usr/lib/systemd/systemd (none) ? sootmarktest 32210
+331. 10/03/26 20:47:34 /usr/lib/systemd/systemd (none) ? sootmarktest 32211
+332. 10/03/26 20:47:34 /usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator (none) ? sootmarktest 32212
+333. 10/03/26 20:47:34 /usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator (none) ? sootmarktest 32213
+334. 10/03/26 20:47:34 /usr/lib/systemd/user-generators/systemd-xdg-autostart-generator (none) ? sootmarktest 32214
+335. 10/03/26 20:47:34 /usr/lib/systemd/user-generators/systemd-xdg-autostart-generator (none) ? sootmarktest 32215
+336. 10/03/26 20:47:34 /usr/lib/systemd/systemd (none) ? sootmarktest 32216
+337. 10/03/26 20:47:34 /usr/lib/systemd/systemd (none) ? sootmarktest 32217
+338. 10/03/26 20:47:34 /usr/lib/systemd/systemd (none) ? sootmarktest 32218
+339. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32219
+340. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32220
+341. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32221
+342. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32222
+343. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32223
+344. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32224
+345. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32225
+346. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32226
+347. 10/03/26 20:47:34 /usr/bin/systemctl (none) ? sootmarktest 32227
+348. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32228
+349. 10/03/26 20:47:34 /usr/bin/dash (none) ? sootmarktest 32229
+350. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32230
+351. 10/03/26 20:47:34 /usr/bin/gpgconf (none) ? sootmarktest 32231
+352. 10/03/26 20:47:34 /usr/bin/systemctl (none) ? sootmarktest 32232
+353. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32233
+354. 10/03/26 20:47:34 /usr/bin/mawk (none) ? sootmarktest 32234
+355. 10/03/26 20:47:34 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32235
+356. 10/03/26 20:47:34 /usr/bin/gpg-agent (none) ? sootmarktest 32236
+357. 10/03/26 20:47:34 /usr/bin/systemctl (none) ? sootmarktest 32237
+358. 10/03/26 20:47:34 /usr/bin/systemctl (none) ? sootmarktest 32238
+359. 10/03/26 20:47:34 /usr/bin/systemctl (none) ? sootmarktest 32239
+360. 10/03/26 20:47:34 /usr/bin/gpg-agent (none) ? sootmarktest 32240
+361. 10/03/26 20:47:34 /usr/bin/systemctl (none) ? sootmarktest 32241
+362. 10/03/26 20:47:34 /usr/bin/systemctl (none) ? sootmarktest 32242
+363. 10/03/26 20:47:34 /usr/bin/systemctl (none) ? sootmarktest 32243
+364. 10/03/26 20:47:34 /usr/bin/systemctl (none) ? sootmarktest 32244
+365. 10/03/26 20:47:34 /usr/lib/systemd/systemd ? ? unset 32245
+366. 10/03/26 20:47:34 /usr/bin/dash (none) ? sootmarktest 32246
+367. 10/03/26 20:47:34 /usr/bin/env (none) ? sootmarktest 32247
+368. 10/03/26 20:47:34 /usr/bin/env (none) ? sootmarktest 32248
+369. 10/03/26 20:47:34 /usr/bin/env (none) ? sootmarktest 32249
+370. 10/03/26 20:47:34 /usr/bin/env (none) ? sootmarktest 32250
+371. 10/03/26 20:47:34 /usr/bin/run-parts (none) ? sootmarktest 32251
+372. 10/03/26 20:47:34 /usr/bin/dash (none) ? sootmarktest 32252
+373. 10/03/26 20:47:34 /usr/bin/uname (none) ? sootmarktest 32253
+374. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? sootmarktest 32254
+375. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? sootmarktest 32255
+376. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? sootmarktest 32256
+377. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session ssh 127.0.0.1 sootmarktest 32257
+378. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? sootmarktest 32258
+379. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session ssh 127.0.0.1 sootmarktest 32259
+380. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session /dev/pts/11 127.0.0.1 sootmarktest 32260
+381. 10/03/26 20:47:34 /usr/bin/bash pts11 ? sootmarktest 32261
+382. 10/03/26 20:47:34 /usr/bin/id pts11 ? sootmarktest 32262
+383. 10/03/26 20:47:34 /usr/bin/id pts11 ? sootmarktest 32263
+384. 10/03/26 20:47:34 /usr/bin/id pts11 ? sootmarktest 32264
+385. 10/03/26 20:47:34 /usr/bin/id pts11 ? sootmarktest 32265
+386. 10/03/26 20:47:34 /usr/bin/id pts11 ? sootmarktest 32266
+387. 10/03/26 20:47:34 /usr/bin/echo pts11 ? sootmarktest 32267
+388. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? sootmarktest 32268
+389. 10/03/26 20:47:34 /usr/bin/ssh (none) ? analyst 32269
+390. 10/03/26 20:47:34 /usr/bin/ssh (none) ? analyst 32270
+391. 10/03/26 20:47:34 /usr/bin/ssh (none) ? analyst 32271
+392. 10/03/26 20:47:34 /usr/bin/ssh (none) 127.0.0.1 analyst 32272
+393. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? sootmarktest 32273
+394. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session (none) ? sootmarktest 32274
+395. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session ssh 127.0.0.1 sootmarktest 32275
+396. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session ssh 127.0.0.1 sootmarktest 32276
+397. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session sshd 127.0.0.1 unset 32277
+398. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session sshd 127.0.0.1 unset 32278
+399. 10/03/26 20:47:34 /usr/lib/openssh/sshd-session ssh 127.0.0.1 unset 32279
+400. 10/03/26 20:47:34 /usr/bin/rm (none) ? analyst 32280
+401. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32281
+402. 10/03/26 20:47:34 /usr/bin/sudo ? ? analyst 32282
+403. 10/03/26 20:47:34 /usr/bin/sudo ? ? unset 32283
+404. 10/03/26 20:47:34 /usr/bin/sudo ? ? unset 32284
+405. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32285
+406. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32286
+407. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32287
+408. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32288
+409. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32289
+410. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32290
+411. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32291
+412. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32292
+413. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32293
+414. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32294
+415. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32295
+416. 10/03/26 20:47:35 /usr/bin/sudo ? ? unset 32296
+417. 10/03/26 20:47:36 /usr/bin/sudo ? ? unset 32297
+418. 10/03/26 20:47:36 /usr/bin/sudo ? ? unset 32298
+419. 10/03/26 20:47:36 /usr/bin/sudo ? ? unset 32299
+420. 10/03/26 20:47:36 /usr/bin/sudo ? ? unset 32300
+421. 10/03/26 20:47:36 /usr/bin/sudo ? ? unset 32301
+422. 10/03/26 20:47:36 /usr/bin/sudo ? ? unset 32302
+423. 10/03/26 20:47:36 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32303
+424. 10/03/26 20:47:36 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32304
+425. 10/03/26 20:47:36 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32305
+426. 10/03/26 20:47:36 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32306
+427. 10/03/26 20:47:36 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32307
+428. 10/03/26 20:47:36 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32308
+429. 10/03/26 20:47:36 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32309
+430. 10/03/26 20:47:36 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32310
+431. 10/03/26 20:47:36 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32311
+432. 10/03/26 20:47:36 /usr/bin/systemctl (none) ? sootmarktest 32312
+433. 10/03/26 20:47:36 /usr/bin/dash (none) ? sootmarktest 32313
+434. 10/03/26 20:47:36 /usr/bin/systemctl (none) ? sootmarktest 32314
+435. 10/03/26 20:47:36 /usr/bin/gpgconf (none) ? sootmarktest 32315
+436. 10/03/26 20:47:36 /usr/bin/mawk (none) ? sootmarktest 32316
+437. 10/03/26 20:47:36 /usr/bin/gpg-agent (none) ? sootmarktest 32317
+438. 10/03/26 20:47:36 /usr/bin/gpg-agent (none) ? sootmarktest 32318
+439. 10/03/26 20:47:36 /usr/bin/systemctl (none) ? sootmarktest 32319
+440. 10/03/26 20:47:36 /usr/bin/systemctl (none) ? sootmarktest 32320
+441. 10/03/26 20:47:36 /usr/bin/systemctl (none) ? sootmarktest 32321
+442. 10/03/26 20:47:36 /usr/bin/systemctl (none) ? sootmarktest 32322
+443. 10/03/26 20:47:36 /usr/lib/systemd/systemd (none) ? sootmarktest 32323
+444. 10/03/26 20:47:36 /usr/lib/systemd/systemd (none) ? sootmarktest 32324
+445. 10/03/26 20:47:36 /usr/lib/systemd/systemd-executor (none) ? sootmarktest 32325
+446. 10/03/26 20:47:36 /usr/lib/systemd/systemd ? ? unset 32326
+447. 10/03/26 20:47:36 /usr/lib/systemd/systemd ? ? unset 32327
+448. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32328
+449. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32329
+450. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32330
+451. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32331
+452. 10/03/26 20:47:38 /usr/sbin/userdel (none) ? unset 32332
+453. 10/03/26 20:47:38 /usr/sbin/userdel (none) ? unset 32333
+454. 10/03/26 20:47:38 /usr/sbin/userdel ? ? unset 32334
+455. 10/03/26 20:47:38 /usr/sbin/userdel ? ? unset 32335
+456. 10/03/26 20:47:38 /usr/sbin/userdel ? ? unset 32336
+457. 10/03/26 20:47:38 /usr/sbin/userdel ? ? unset 32337
+458. 10/03/26 20:47:38 /usr/sbin/userdel ? ? unset 32338
+459. 10/03/26 20:47:38 /usr/sbin/userdel ? ? unset 32339
+460. 10/03/26 20:47:38 /usr/sbin/userdel ? ? unset 32340
+461. 10/03/26 20:47:38 /usr/sbin/userdel ? ? unset 32341
+462. 10/03/26 20:47:38 /usr/sbin/userdel (none) ? unset 32342
+463. 10/03/26 20:47:38 /usr/sbin/userdel (none) ? unset 32343
+464. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32344
+465. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32345
+466. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32346
+467. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32347
+468. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32348
+469. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32349
+470. 10/03/26 20:47:38 /usr/sbin/groupdel ? ? unset 32350
+471. 10/03/26 20:47:38 /usr/sbin/groupdel ? ? unset 32351
+472. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32352
+473. 10/03/26 20:47:38 /usr/bin/sudo ? ? unset 32353
+474. 10/03/26 20:47:38 /usr/bin/rmdir (none) ? unset 32354
+475. 10/03/26 20:47:39 /usr/bin/sudo ? ? unset 32355
+476. 10/03/26 20:47:39 /usr/bin/sudo ? ? unset 32356
+477. 10/03/26 20:47:39 /usr/bin/sudo ? ? unset 32357
+478. 10/03/26 20:47:39 /usr/bin/sudo ? ? unset 32358
+479. 10/03/26 20:47:39 /usr/sbin/auditctl (none) ? unset 32359
+480. 10/03/26 20:47:39 /usr/sbin/auditctl (none) ? unset 32360
+481. 10/03/26 20:47:39 /usr/sbin/auditctl (none) ? unset 32361
+482. 10/03/26 20:47:39 /usr/sbin/auditctl (none) ? unset 32362
+483. 10/03/26 20:47:39 /usr/bin/sudo ? ? unset 32363
+484. 10/03/26 20:47:39 /usr/bin/sudo ? ? unset 32364
+485. 10/03/26 20:47:40 /usr/bin/sudo ? ? unset 32365
+486. 10/03/26 20:47:40 /usr/bin/sudo ? ? unset 32366
+487. 10/03/26 20:47:40 /usr/bin/sudo ? ? unset 32367
+488. 10/03/26 20:47:40 /usr/bin/sudo ? ? unset 32368
+### aureport --syscall
+
+Syscall Report
+=======================================
+# date time syscall pid comm auid event
+=======================================
+1. 10/03/26 20:47:32 sendto 1928453 auditctl unset 31887
+2. 10/03/26 20:47:33 sendto 1928457 auditctl unset 31894
+3. 10/03/26 20:47:33 sendto 1928461 auditctl unset 31901
+4. 10/03/26 20:47:33 sendto 1928465 auditctl unset 31908
+5. 10/03/26 20:47:33 sendto 1928470 auditctl unset 31915
+6. 10/03/26 20:47:34 write 1928481 bash unknown(1000) 31928
+7. 10/03/26 20:47:34 execve 1928481 sudo analyst 31929
+8. 10/03/26 20:47:34 connect 1928481 sudo analyst 31930
+9. 10/03/26 20:47:34 connect 1928481 sudo analyst 31931
+10. 10/03/26 20:47:34 connect 1928481 sudo analyst 31932
+11. 10/03/26 20:47:34 connect 1928481 sudo analyst 31933
+12. 10/03/26 20:47:34 connect 1928481 sudo analyst 31934
+13. 10/03/26 20:47:34 connect 1928481 sudo analyst 31935
+14. 10/03/26 20:47:34 connect 1928481 sudo analyst 31936
+15. 10/03/26 20:47:34 execve 1928482 unix_chkpwd analyst 31937
+16. 10/03/26 20:47:34 connect 1928482 unix_chkpwd analyst 31938
+17. 10/03/26 20:47:34 connect 1928482 unix_chkpwd analyst 31939
+18. 10/03/26 20:47:34 connect 1928481 sudo analyst 31941
+19. 10/03/26 20:47:34 execve 1928483 bash analyst 31945
+20. 10/03/26 20:47:34 execve 1928484 sudo analyst 31946
+21. 10/03/26 20:47:34 connect 1928484 sudo analyst 31947
+22. 10/03/26 20:47:34 connect 1928484 sudo analyst 31948
+23. 10/03/26 20:47:34 connect 1928484 sudo analyst 31949
+24. 10/03/26 20:47:34 connect 1928484 sudo analyst 31950
+25. 10/03/26 20:47:34 connect 1928484 sudo analyst 31951
+26. 10/03/26 20:47:34 connect 1928484 sudo analyst 31952
+27. 10/03/26 20:47:34 execve 1928485 unix_chkpwd analyst 31953
+28. 10/03/26 20:47:34 connect 1928485 unix_chkpwd analyst 31954
+29. 10/03/26 20:47:34 connect 1928485 unix_chkpwd analyst 31955
+30. 10/03/26 20:47:34 connect 1928484 sudo analyst 31957
+31. 10/03/26 20:47:34 execve 1928486 groupadd analyst 31961
+32. 10/03/26 20:47:34 connect 1928486 groupadd analyst 31962
+33. 10/03/26 20:47:34 connect 1928486 groupadd analyst 31963
+34. 10/03/26 20:47:34 connect 1928486 groupadd analyst 31964
+35. 10/03/26 20:47:34 connect 1928486 groupadd analyst 31965
+36. 10/03/26 20:47:34 connect 1928486 groupadd analyst 31966
+37. 10/03/26 20:47:34 connect 1928486 groupadd analyst 31968
+38. 10/03/26 20:47:34 execve 1928487 groupadd analyst 31970
+39. 10/03/26 20:47:34 execve 1928488 groupadd analyst 31971
+40. 10/03/26 20:47:34 execve 1928489 groupadd analyst 31972
+41. 10/03/26 20:47:34 execve 1928490 sudo analyst 31975
+42. 10/03/26 20:47:34 connect 1928490 sudo analyst 31976
+43. 10/03/26 20:47:34 connect 1928490 sudo analyst 31977
+44. 10/03/26 20:47:34 connect 1928490 sudo analyst 31978
+45. 10/03/26 20:47:34 connect 1928490 sudo analyst 31979
+46. 10/03/26 20:47:34 connect 1928490 sudo analyst 31980
+47. 10/03/26 20:47:34 connect 1928490 sudo analyst 31981
+48. 10/03/26 20:47:34 execve 1928491 unix_chkpwd analyst 31982
+49. 10/03/26 20:47:34 connect 1928491 unix_chkpwd analyst 31983
+50. 10/03/26 20:47:34 connect 1928491 unix_chkpwd analyst 31984
+51. 10/03/26 20:47:34 connect 1928490 sudo analyst 31986
+52. 10/03/26 20:47:34 execve 1928492 useradd analyst 31990
+53. 10/03/26 20:47:34 connect 1928492 useradd analyst 31991
+54. 10/03/26 20:47:34 connect 1928492 useradd analyst 31992
+55. 10/03/26 20:47:34 connect 1928492 useradd analyst 31993
+56. 10/03/26 20:47:34 connect 1928492 useradd analyst 31994
+57. 10/03/26 20:47:34 connect 1928492 useradd analyst 31995
+58. 10/03/26 20:47:34 connect 1928492 useradd analyst 31996
+59. 10/03/26 20:47:34 connect 1928492 useradd analyst 31997
+60. 10/03/26 20:47:34 openat 1928492 useradd analyst 31998
+61. 10/03/26 20:47:34 connect 1928492 useradd analyst 31999
+62. 10/03/26 20:47:34 openat 1928492 useradd analyst 32000
+63. 10/03/26 20:47:34 connect 1928492 useradd analyst 32001
+64. 10/03/26 20:47:34 connect 1928492 useradd analyst 32002
+65. 10/03/26 20:47:34 connect 1928492 useradd analyst 32004
+66. 10/03/26 20:47:34 connect 1928492 useradd analyst 32005
+67. 10/03/26 20:47:34 connect 1928492 useradd analyst 32006
+68. 10/03/26 20:47:34 rename 1928492 useradd analyst 32010
+69. 10/03/26 20:47:34 rename 1928492 useradd analyst 32011
+70. 10/03/26 20:47:34 execve 1928493 useradd analyst 32012
+71. 10/03/26 20:47:34 execve 1928494 useradd analyst 32013
+72. 10/03/26 20:47:34 execve 1928495 useradd analyst 32014
+73. 10/03/26 20:47:34 execve 1928496 useradd analyst 32015
+74. 10/03/26 20:47:34 execve 1928498 sudo analyst 32019
+75. 10/03/26 20:47:34 connect 1928498 sudo analyst 32020
+76. 10/03/26 20:47:34 connect 1928498 sudo analyst 32021
+77. 10/03/26 20:47:34 connect 1928498 sudo analyst 32022
+78. 10/03/26 20:47:34 connect 1928498 sudo analyst 32023
+79. 10/03/26 20:47:34 connect 1928498 sudo analyst 32024
+80. 10/03/26 20:47:34 connect 1928498 sudo analyst 32025
+81. 10/03/26 20:47:34 execve 1928499 unix_chkpwd analyst 32026
+82. 10/03/26 20:47:34 connect 1928499 unix_chkpwd analyst 32027
+83. 10/03/26 20:47:34 connect 1928499 unix_chkpwd analyst 32028
+84. 10/03/26 20:47:34 connect 1928498 sudo analyst 32030
+85. 10/03/26 20:47:34 execve 1928500 chpasswd analyst 32034
+86. 10/03/26 20:47:34 connect 1928500 chpasswd analyst 32035
+87. 10/03/26 20:47:34 connect 1928500 chpasswd analyst 32036
+88. 10/03/26 20:47:34 execve 1928501 unix_chkpwd analyst 32037
+89. 10/03/26 20:47:34 connect 1928501 unix_chkpwd analyst 32038
+90. 10/03/26 20:47:34 connect 1928501 unix_chkpwd analyst 32039
+91. 10/03/26 20:47:34 execve 1928502 unix_chkpwd analyst 32040
+92. 10/03/26 20:47:34 connect 1928502 unix_chkpwd analyst 32041
+93. 10/03/26 20:47:34 connect 1928502 unix_chkpwd analyst 32042
+94. 10/03/26 20:47:34 execve 1928503 unix_chkpwd analyst 32043
+95. 10/03/26 20:47:34 connect 1928503 unix_chkpwd analyst 32044
+96. 10/03/26 20:47:34 connect 1928503 unix_chkpwd analyst 32045
+97. 10/03/26 20:47:34 rename 1928500 chpasswd analyst 32046
+98. 10/03/26 20:47:34 connect 1928500 chpasswd analyst 32047
+99. 10/03/26 20:47:34 execve 1928504 chpasswd analyst 32049
+100. 10/03/26 20:47:34 execve 1928505 sudo analyst 32052
+101. 10/03/26 20:47:34 connect 1928505 sudo analyst 32053
+102. 10/03/26 20:47:34 connect 1928505 sudo analyst 32054
+103. 10/03/26 20:47:34 connect 1928505 sudo analyst 32055
+104. 10/03/26 20:47:34 connect 1928505 sudo analyst 32056
+105. 10/03/26 20:47:34 connect 1928505 sudo analyst 32057
+106. 10/03/26 20:47:34 connect 1928505 sudo analyst 32058
+107. 10/03/26 20:47:34 execve 1928506 unix_chkpwd analyst 32059
+108. 10/03/26 20:47:34 connect 1928506 unix_chkpwd analyst 32060
+109. 10/03/26 20:47:34 connect 1928506 unix_chkpwd analyst 32061
+110. 10/03/26 20:47:34 connect 1928505 sudo analyst 32063
+111. 10/03/26 20:47:34 execve 1928507 usermod analyst 32067
+112. 10/03/26 20:47:34 connect 1928507 usermod analyst 32068
+113. 10/03/26 20:47:34 connect 1928507 usermod analyst 32069
+114. 10/03/26 20:47:34 connect 1928507 usermod analyst 32070
+115. 10/03/26 20:47:34 connect 1928507 usermod analyst 32071
+116. 10/03/26 20:47:34 openat 1928507 usermod analyst 32072
+117. 10/03/26 20:47:34 openat 1928507 usermod analyst 32073
+118. 10/03/26 20:47:34 connect 1928507 usermod analyst 32075
+119. 10/03/26 20:47:34 execve 1928508 usermod analyst 32077
+120. 10/03/26 20:47:34 execve 1928509 usermod analyst 32078
+121. 10/03/26 20:47:34 execve 1928510 usermod analyst 32079
+122. 10/03/26 20:47:34 execve 1928511 usermod analyst 32080
+123. 10/03/26 20:47:34 execve 1928512 echo analyst 32083
+124. 10/03/26 20:47:34 execve 1928513 echo analyst 32084
+125. 10/03/26 20:47:34 execve 1928515 head analyst 32085
+126. 10/03/26 20:47:34 execve 1928516 tr analyst 32086
+127. 10/03/26 20:47:34 execve 1928517 true analyst 32087
+128. 10/03/26 20:47:34 execve 1928518 touch analyst 32088
+129. 10/03/26 20:47:34 execve 1928519 chmod analyst 32089
+130. 10/03/26 20:47:34 fchmodat 1928519 chmod analyst 32090
+131. 10/03/26 20:47:34 execve 1928520 mv analyst 32091
+132. 10/03/26 20:47:34 renameat2 1928520 mv analyst 32092
+133. 10/03/26 20:47:34 execve 1928521 rm analyst 32093
+134. 10/03/26 20:47:34 unlinkat 1928521 rm analyst 32094
+135. 10/03/26 20:47:34 execve 1928522 sudo analyst 32095
+136. 10/03/26 20:47:34 connect 1928522 sudo analyst 32096
+137. 10/03/26 20:47:34 connect 1928522 sudo analyst 32097
+138. 10/03/26 20:47:34 connect 1928522 sudo analyst 32098
+139. 10/03/26 20:47:34 connect 1928522 sudo analyst 32099
+140. 10/03/26 20:47:34 connect 1928522 sudo analyst 32100
+141. 10/03/26 20:47:34 connect 1928522 sudo analyst 32101
+142. 10/03/26 20:47:34 connect 1928522 sudo analyst 32102
+143. 10/03/26 20:47:34 execve 1928523 unix_chkpwd analyst 32103
+144. 10/03/26 20:47:34 connect 1928523 unix_chkpwd analyst 32104
+145. 10/03/26 20:47:34 connect 1928523 unix_chkpwd analyst 32105
+146. 10/03/26 20:47:34 connect 1928522 sudo analyst 32107
+147. 10/03/26 20:47:34 execve 1928524 id analyst 32111
+148. 10/03/26 20:47:34 connect 1928524 id analyst 32112
+149. 10/03/26 20:47:34 connect 1928524 id analyst 32113
+150. 10/03/26 20:47:34 connect 1928524 id analyst 32114
+151. 10/03/26 20:47:34 connect 1928524 id analyst 32115
+152. 10/03/26 20:47:34 execve 1928525 sudo analyst 32118
+153. 10/03/26 20:47:34 connect 1928525 sudo analyst 32119
+154. 10/03/26 20:47:34 connect 1928525 sudo analyst 32120
+155. 10/03/26 20:47:34 connect 1928525 sudo analyst 32121
+156. 10/03/26 20:47:34 connect 1928525 sudo analyst 32122
+157. 10/03/26 20:47:34 connect 1928525 sudo analyst 32123
+158. 10/03/26 20:47:34 connect 1928525 sudo analyst 32124
+159. 10/03/26 20:47:34 execve 1928526 unix_chkpwd analyst 32125
+160. 10/03/26 20:47:34 connect 1928526 unix_chkpwd analyst 32126
+161. 10/03/26 20:47:34 connect 1928526 unix_chkpwd analyst 32127
+162. 10/03/26 20:47:34 connect 1928525 sudo analyst 32129
+163. 10/03/26 20:47:34 execve 1928527 cat analyst 32133
+164. 10/03/26 20:47:34 execve 1928528 bash analyst 32136
+165. 10/03/26 20:47:34 connect 1928528 bash analyst 32137
+166. 10/03/26 20:47:34 execve 1928529 head analyst 32138
+167. 10/03/26 20:47:34 execve 1928531 python3 analyst 32139
+168. 10/03/26 20:47:34 connect 1928531 python3 analyst 32140
+169. 10/03/26 20:47:34 execve 1928533 mktemp analyst 32141
+170. 10/03/26 20:47:34 execve 1928534 ssh-keygen analyst 32142
+171. 10/03/26 20:47:34 connect 1928534 ssh-keygen analyst 32143
+172. 10/03/26 20:47:34 connect 1928534 ssh-keygen analyst 32144
+173. 10/03/26 20:47:34 execve 1928535 sudo analyst 32145
+174. 10/03/26 20:47:34 connect 1928535 sudo analyst 32146
+175. 10/03/26 20:47:34 connect 1928535 sudo analyst 32147
+176. 10/03/26 20:47:34 connect 1928535 sudo analyst 32148
+177. 10/03/26 20:47:34 connect 1928535 sudo analyst 32149
+178. 10/03/26 20:47:34 connect 1928535 sudo analyst 32150
+179. 10/03/26 20:47:34 connect 1928535 sudo analyst 32151
+180. 10/03/26 20:47:34 execve 1928536 unix_chkpwd analyst 32152
+181. 10/03/26 20:47:34 connect 1928536 unix_chkpwd analyst 32153
+182. 10/03/26 20:47:34 connect 1928536 unix_chkpwd analyst 32154
+183. 10/03/26 20:47:34 connect 1928535 sudo analyst 32156
+184. 10/03/26 20:47:34 execve 1928537 install analyst 32160
+185. 10/03/26 20:47:34 connect 1928537 install analyst 32161
+186. 10/03/26 20:47:34 connect 1928537 install analyst 32162
+187. 10/03/26 20:47:34 connect 1928537 install analyst 32163
+188. 10/03/26 20:47:34 connect 1928537 install analyst 32164
+189. 10/03/26 20:47:34 execve 1928538 sudo analyst 32167
+190. 10/03/26 20:47:34 connect 1928538 sudo analyst 32168
+191. 10/03/26 20:47:34 connect 1928538 sudo analyst 32169
+192. 10/03/26 20:47:34 connect 1928538 sudo analyst 32170
+193. 10/03/26 20:47:34 connect 1928538 sudo analyst 32171
+194. 10/03/26 20:47:34 connect 1928538 sudo analyst 32172
+195. 10/03/26 20:47:34 connect 1928538 sudo analyst 32173
+196. 10/03/26 20:47:34 execve 1928539 unix_chkpwd analyst 32174
+197. 10/03/26 20:47:34 connect 1928539 unix_chkpwd analyst 32175
+198. 10/03/26 20:47:34 connect 1928539 unix_chkpwd analyst 32176
+199. 10/03/26 20:47:34 connect 1928538 sudo analyst 32178
+200. 10/03/26 20:47:34 execve 1928540 install analyst 32182
+201. 10/03/26 20:47:34 connect 1928540 install analyst 32183
+202. 10/03/26 20:47:34 connect 1928540 install analyst 32184
+203. 10/03/26 20:47:34 connect 1928540 install analyst 32185
+204. 10/03/26 20:47:34 connect 1928540 install analyst 32186
+205. 10/03/26 20:47:34 execve 1928541 ssh analyst 32189
+206. 10/03/26 20:47:34 connect 1928541 ssh analyst 32190
+207. 10/03/26 20:47:34 connect 1928541 ssh analyst 32191
+208. 10/03/26 20:47:34 connect 1928541 ssh analyst 32192
+209. 10/03/26 20:47:34 write 1928542 sshd-session unknown(1001) 32195
+210. 10/03/26 20:47:34 connect 1928542 sshd-session sootmarktest 32196
+211. 10/03/26 20:47:34 connect 1928542 sshd-session sootmarktest 32197
+212. 10/03/26 20:47:34 connect 1928542 sshd-session sootmarktest 32198
+213. 10/03/26 20:47:34 connect 1928542 sshd-session sootmarktest 32199
+214. 10/03/26 20:47:34 write 1928547 (systemd) unknown(1001) 32203
+215. 10/03/26 20:47:34 connect 1928547 (systemd) sootmarktest 32204
+216. 10/03/26 20:47:34 connect 1928547 (systemd) sootmarktest 32205
+217. 10/03/26 20:47:34 connect 1928547 (systemd) sootmarktest 32206
+218. 10/03/26 20:47:34 connect 1928547 (systemd) sootmarktest 32207
+219. 10/03/26 20:47:34 execve 1928547 systemd sootmarktest 32209
+220. 10/03/26 20:47:34 connect 1928547 systemd sootmarktest 32210
+221. 10/03/26 20:47:34 connect 1928547 systemd sootmarktest 32211
+222. 10/03/26 20:47:34 execve 1928551 30-systemd-envi sootmarktest 32212
+223. 10/03/26 20:47:34 connect 1928551 30-systemd-envi sootmarktest 32213
+224. 10/03/26 20:47:34 execve 1928553 systemd-xdg-aut sootmarktest 32214
+225. 10/03/26 20:47:34 connect 1928553 systemd-xdg-aut sootmarktest 32215
+226. 10/03/26 20:47:34 connect 1928547 systemd sootmarktest 32216
+227. 10/03/26 20:47:34 connect 1928547 systemd sootmarktest 32217
+228. 10/03/26 20:47:34 connect 1928547 systemd sootmarktest 32218
+229. 10/03/26 20:47:34 execve 1928554 9 sootmarktest 32219
+230. 10/03/26 20:47:34 execve 1928555 9 sootmarktest 32220
+231. 10/03/26 20:47:34 execve 1928556 9 sootmarktest 32221
+232. 10/03/26 20:47:34 execve 1928557 9 sootmarktest 32222
+233. 10/03/26 20:47:34 connect 1928554 9 sootmarktest 32223
+234. 10/03/26 20:47:34 connect 1928554 (ystemctl) sootmarktest 32224
+235. 10/03/26 20:47:34 connect 1928555 9 sootmarktest 32225
+236. 10/03/26 20:47:34 connect 1928555 (sh) sootmarktest 32226
+237. 10/03/26 20:47:34 execve 1928554 systemctl sootmarktest 32227
+238. 10/03/26 20:47:34 connect 1928556 9 sootmarktest 32228
+239. 10/03/26 20:47:34 execve 1928555 sh sootmarktest 32229
+240. 10/03/26 20:47:34 connect 1928556 (ystemctl) sootmarktest 32230
+241. 10/03/26 20:47:34 execve 1928559 gpgconf sootmarktest 32231
+242. 10/03/26 20:47:34 execve 1928556 systemctl sootmarktest 32232
+243. 10/03/26 20:47:34 connect 1928557 9 sootmarktest 32233
+244. 10/03/26 20:47:34 execve 1928560 awk sootmarktest 32234
+245. 10/03/26 20:47:34 connect 1928557 (ystemctl) sootmarktest 32235
+246. 10/03/26 20:47:34 execve 1928561 gpg-agent sootmarktest 32236
+247. 10/03/26 20:47:34 execve 1928557 systemctl sootmarktest 32237
+248. 10/03/26 20:47:34 connect 1928554 systemctl sootmarktest 32238
+249. 10/03/26 20:47:34 connect 1928554 systemctl sootmarktest 32239
+250. 10/03/26 20:47:34 execve 1928562 gpg-agent sootmarktest 32240
+251. 10/03/26 20:47:34 connect 1928556 systemctl sootmarktest 32241
+252. 10/03/26 20:47:34 connect 1928556 systemctl sootmarktest 32242
+253. 10/03/26 20:47:34 connect 1928557 systemctl sootmarktest 32243
+254. 10/03/26 20:47:34 connect 1928557 systemctl sootmarktest 32244
+255. 10/03/26 20:47:34 execve 1928567 sh sootmarktest 32246
+256. 10/03/26 20:47:34 execve 1928568 env sootmarktest 32247
+257. 10/03/26 20:47:34 execve 1928568 env sootmarktest 32248
+258. 10/03/26 20:47:34 execve 1928568 env sootmarktest 32249
+259. 10/03/26 20:47:34 execve 1928568 env sootmarktest 32250
+260. 10/03/26 20:47:34 execve 1928568 run-parts sootmarktest 32251
+261. 10/03/26 20:47:34 execve 1928569 10-uname sootmarktest 32252
+262. 10/03/26 20:47:34 execve 1928570 uname sootmarktest 32253
+263. 10/03/26 20:47:34 connect 1928542 sshd-session sootmarktest 32254
+264. 10/03/26 20:47:34 connect 1928542 sshd-session sootmarktest 32255
+265. 10/03/26 20:47:34 connect 1928542 sshd-session sootmarktest 32256
+266. 10/03/26 20:47:34 connect 1928571 sshd-session sootmarktest 32258
+267. 10/03/26 20:47:34 execve 1928572 bash sootmarktest 32261
+268. 10/03/26 20:47:34 execve 1928573 id sootmarktest 32262
+269. 10/03/26 20:47:34 connect 1928573 id sootmarktest 32263
+270. 10/03/26 20:47:34 connect 1928573 id sootmarktest 32264
+271. 10/03/26 20:47:34 connect 1928573 id sootmarktest 32265
+272. 10/03/26 20:47:34 connect 1928573 id sootmarktest 32266
+273. 10/03/26 20:47:34 execve 1928572 echo sootmarktest 32267
+274. 10/03/26 20:47:34 connect 1928571 sshd-session sootmarktest 32268
+275. 10/03/26 20:47:34 execve 1928574 ssh analyst 32269
+276. 10/03/26 20:47:34 connect 1928574 ssh analyst 32270
+277. 10/03/26 20:47:34 connect 1928574 ssh analyst 32271
+278. 10/03/26 20:47:34 connect 1928574 ssh analyst 32272
+279. 10/03/26 20:47:34 connect 1928542 sshd-session sootmarktest 32273
+280. 10/03/26 20:47:34 connect 1928542 sshd-session sootmarktest 32274
+281. 10/03/26 20:47:34 execve 1928578 rm analyst 32280
+282. 10/03/26 20:47:36 execve 1928592 9 sootmarktest 32303
+283. 10/03/26 20:47:36 execve 1928593 9 sootmarktest 32304
+284. 10/03/26 20:47:36 execve 1928594 9 sootmarktest 32305
+285. 10/03/26 20:47:36 connect 1928592 9 sootmarktest 32306
+286. 10/03/26 20:47:36 connect 1928593 9 sootmarktest 32307
+287. 10/03/26 20:47:36 connect 1928594 9 sootmarktest 32308
+288. 10/03/26 20:47:36 connect 1928592 (sh) sootmarktest 32309
+289. 10/03/26 20:47:36 connect 1928593 (ystemctl) sootmarktest 32310
+290. 10/03/26 20:47:36 connect 1928594 (ystemctl) sootmarktest 32311
+291. 10/03/26 20:47:36 execve 1928593 systemctl sootmarktest 32312
+292. 10/03/26 20:47:36 execve 1928592 sh sootmarktest 32313
+293. 10/03/26 20:47:36 execve 1928594 systemctl sootmarktest 32314
+294. 10/03/26 20:47:36 execve 1928596 gpgconf sootmarktest 32315
+295. 10/03/26 20:47:36 execve 1928597 awk sootmarktest 32316
+296. 10/03/26 20:47:36 execve 1928598 gpg-agent sootmarktest 32317
+297. 10/03/26 20:47:36 execve 1928599 gpg-agent sootmarktest 32318
+298. 10/03/26 20:47:36 connect 1928594 systemctl sootmarktest 32319
+299. 10/03/26 20:47:36 connect 1928593 systemctl sootmarktest 32320
+300. 10/03/26 20:47:36 connect 1928594 systemctl sootmarktest 32321
+301. 10/03/26 20:47:36 connect 1928593 systemctl sootmarktest 32322
+302. 10/03/26 20:47:36 connect 1928547 systemd sootmarktest 32323
+303. 10/03/26 20:47:36 connect 1928547 systemd sootmarktest 32324
+304. 10/03/26 20:47:36 connect 1928549 (sd-pam) sootmarktest 32325
+305. 10/03/26 20:47:38 openat 1928610 userdel unset 32332
+306. 10/03/26 20:47:38 openat 1928610 userdel unset 32333
+307. 10/03/26 20:47:38 rename 1928610 userdel unset 32342
+308. 10/03/26 20:47:38 rename 1928610 userdel unset 32343
+309. 10/03/26 20:47:38 rmdir 1928628 rmdir unset 32354
+310. 10/03/26 20:47:39 sendto 1928633 auditctl unset 32359
+311. 10/03/26 20:47:39 sendto 1928633 auditctl unset 32360
+312. 10/03/26 20:47:39 sendto 1928633 auditctl unset 32361
+313. 10/03/26 20:47:39 sendto 1928633 auditctl unset 32362
+### aureport --comm
+
+Command Report
+====================================
+# date time comm term host auid event
+=====================================
+1. 10/03/26 20:47:32 auditctl (none) ? unset 31887
+2. 10/03/26 20:47:33 auditctl (none) ? unset 31894
+3. 10/03/26 20:47:33 auditctl (none) ? unset 31901
+4. 10/03/26 20:47:33 auditctl (none) ? unset 31908
+5. 10/03/26 20:47:33 auditctl (none) ? unset 31915
+6. 10/03/26 20:47:34 bash (none) ? unknown(1000) 31928
+7. 10/03/26 20:47:34 sudo (none) ? analyst 31929
+8. 10/03/26 20:47:34 sudo (none) ? analyst 31930
+9. 10/03/26 20:47:34 sudo (none) ? analyst 31931
+10. 10/03/26 20:47:34 sudo (none) ? analyst 31932
+11. 10/03/26 20:47:34 sudo (none) ? analyst 31933
+12. 10/03/26 20:47:34 sudo (none) ? analyst 31934
+13. 10/03/26 20:47:34 sudo (none) ? analyst 31935
+14. 10/03/26 20:47:34 sudo (none) ? analyst 31936
+15. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 31937
+16. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 31938
+17. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 31939
+18. 10/03/26 20:47:34 sudo (none) ? analyst 31941
+19. 10/03/26 20:47:34 bash (none) ? analyst 31945
+20. 10/03/26 20:47:34 sudo (none) ? analyst 31946
+21. 10/03/26 20:47:34 sudo (none) ? analyst 31947
+22. 10/03/26 20:47:34 sudo (none) ? analyst 31948
+23. 10/03/26 20:47:34 sudo (none) ? analyst 31949
+24. 10/03/26 20:47:34 sudo (none) ? analyst 31950
+25. 10/03/26 20:47:34 sudo (none) ? analyst 31951
+26. 10/03/26 20:47:34 sudo (none) ? analyst 31952
+27. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 31953
+28. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 31954
+29. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 31955
+30. 10/03/26 20:47:34 sudo (none) ? analyst 31957
+31. 10/03/26 20:47:34 groupadd (none) ? analyst 31961
+32. 10/03/26 20:47:34 groupadd (none) ? analyst 31962
+33. 10/03/26 20:47:34 groupadd (none) ? analyst 31963
+34. 10/03/26 20:47:34 groupadd (none) ? analyst 31964
+35. 10/03/26 20:47:34 groupadd (none) ? analyst 31965
+36. 10/03/26 20:47:34 groupadd (none) ? analyst 31966
+37. 10/03/26 20:47:34 groupadd (none) ? analyst 31968
+38. 10/03/26 20:47:34 groupadd (none) ? analyst 31970
+39. 10/03/26 20:47:34 groupadd (none) ? analyst 31971
+40. 10/03/26 20:47:34 groupadd (none) ? analyst 31972
+41. 10/03/26 20:47:34 sudo (none) ? analyst 31975
+42. 10/03/26 20:47:34 sudo (none) ? analyst 31976
+43. 10/03/26 20:47:34 sudo (none) ? analyst 31977
+44. 10/03/26 20:47:34 sudo (none) ? analyst 31978
+45. 10/03/26 20:47:34 sudo (none) ? analyst 31979
+46. 10/03/26 20:47:34 sudo (none) ? analyst 31980
+47. 10/03/26 20:47:34 sudo (none) ? analyst 31981
+48. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 31982
+49. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 31983
+50. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 31984
+51. 10/03/26 20:47:34 sudo (none) ? analyst 31986
+52. 10/03/26 20:47:34 useradd (none) ? analyst 31990
+53. 10/03/26 20:47:34 useradd (none) ? analyst 31991
+54. 10/03/26 20:47:34 useradd (none) ? analyst 31992
+55. 10/03/26 20:47:34 useradd (none) ? analyst 31993
+56. 10/03/26 20:47:34 useradd (none) ? analyst 31994
+57. 10/03/26 20:47:34 useradd (none) ? analyst 31995
+58. 10/03/26 20:47:34 useradd (none) ? analyst 31996
+59. 10/03/26 20:47:34 useradd (none) ? analyst 31997
+60. 10/03/26 20:47:34 useradd (none) ? analyst 31998
+61. 10/03/26 20:47:34 useradd (none) ? analyst 31999
+62. 10/03/26 20:47:34 useradd (none) ? analyst 32000
+63. 10/03/26 20:47:34 useradd (none) ? analyst 32001
+64. 10/03/26 20:47:34 useradd (none) ? analyst 32002
+65. 10/03/26 20:47:34 useradd (none) ? analyst 32004
+66. 10/03/26 20:47:34 useradd (none) ? analyst 32005
+67. 10/03/26 20:47:34 useradd (none) ? analyst 32006
+68. 10/03/26 20:47:34 useradd (none) ? analyst 32010
+69. 10/03/26 20:47:34 useradd (none) ? analyst 32011
+70. 10/03/26 20:47:34 useradd (none) ? analyst 32012
+71. 10/03/26 20:47:34 useradd (none) ? analyst 32013
+72. 10/03/26 20:47:34 useradd (none) ? analyst 32014
+73. 10/03/26 20:47:34 useradd (none) ? analyst 32015
+74. 10/03/26 20:47:34 sudo (none) ? analyst 32019
+75. 10/03/26 20:47:34 sudo (none) ? analyst 32020
+76. 10/03/26 20:47:34 sudo (none) ? analyst 32021
+77. 10/03/26 20:47:34 sudo (none) ? analyst 32022
+78. 10/03/26 20:47:34 sudo (none) ? analyst 32023
+79. 10/03/26 20:47:34 sudo (none) ? analyst 32024
+80. 10/03/26 20:47:34 sudo (none) ? analyst 32025
+81. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32026
+82. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32027
+83. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32028
+84. 10/03/26 20:47:34 sudo (none) ? analyst 32030
+85. 10/03/26 20:47:34 chpasswd (none) ? analyst 32034
+86. 10/03/26 20:47:34 chpasswd (none) ? analyst 32035
+87. 10/03/26 20:47:34 chpasswd (none) ? analyst 32036
+88. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32037
+89. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32038
+90. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32039
+91. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32040
+92. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32041
+93. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32042
+94. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32043
+95. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32044
+96. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32045
+97. 10/03/26 20:47:34 chpasswd (none) ? analyst 32046
+98. 10/03/26 20:47:34 chpasswd (none) ? analyst 32047
+99. 10/03/26 20:47:34 chpasswd (none) ? analyst 32049
+100. 10/03/26 20:47:34 sudo (none) ? analyst 32052
+101. 10/03/26 20:47:34 sudo (none) ? analyst 32053
+102. 10/03/26 20:47:34 sudo (none) ? analyst 32054
+103. 10/03/26 20:47:34 sudo (none) ? analyst 32055
+104. 10/03/26 20:47:34 sudo (none) ? analyst 32056
+105. 10/03/26 20:47:34 sudo (none) ? analyst 32057
+106. 10/03/26 20:47:34 sudo (none) ? analyst 32058
+107. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32059
+108. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32060
+109. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32061
+110. 10/03/26 20:47:34 sudo (none) ? analyst 32063
+111. 10/03/26 20:47:34 usermod (none) ? analyst 32067
+112. 10/03/26 20:47:34 usermod (none) ? analyst 32068
+113. 10/03/26 20:47:34 usermod (none) ? analyst 32069
+114. 10/03/26 20:47:34 usermod (none) ? analyst 32070
+115. 10/03/26 20:47:34 usermod (none) ? analyst 32071
+116. 10/03/26 20:47:34 usermod (none) ? analyst 32072
+117. 10/03/26 20:47:34 usermod (none) ? analyst 32073
+118. 10/03/26 20:47:34 usermod (none) ? analyst 32075
+119. 10/03/26 20:47:34 usermod (none) ? analyst 32077
+120. 10/03/26 20:47:34 usermod (none) ? analyst 32078
+121. 10/03/26 20:47:34 usermod (none) ? analyst 32079
+122. 10/03/26 20:47:34 usermod (none) ? analyst 32080
+123. 10/03/26 20:47:34 echo (none) ? analyst 32083
+124. 10/03/26 20:47:34 echo (none) ? analyst 32084
+125. 10/03/26 20:47:34 head (none) ? analyst 32085
+126. 10/03/26 20:47:34 tr (none) ? analyst 32086
+127. 10/03/26 20:47:34 true (none) ? analyst 32087
+128. 10/03/26 20:47:34 touch (none) ? analyst 32088
+129. 10/03/26 20:47:34 chmod (none) ? analyst 32089
+130. 10/03/26 20:47:34 chmod (none) ? analyst 32090
+131. 10/03/26 20:47:34 mv (none) ? analyst 32091
+132. 10/03/26 20:47:34 mv (none) ? analyst 32092
+133. 10/03/26 20:47:34 rm (none) ? analyst 32093
+134. 10/03/26 20:47:34 rm (none) ? analyst 32094
+135. 10/03/26 20:47:34 sudo (none) ? analyst 32095
+136. 10/03/26 20:47:34 sudo (none) ? analyst 32096
+137. 10/03/26 20:47:34 sudo (none) ? analyst 32097
+138. 10/03/26 20:47:34 sudo (none) ? analyst 32098
+139. 10/03/26 20:47:34 sudo (none) ? analyst 32099
+140. 10/03/26 20:47:34 sudo (none) ? analyst 32100
+141. 10/03/26 20:47:34 sudo (none) ? analyst 32101
+142. 10/03/26 20:47:34 sudo (none) ? analyst 32102
+143. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32103
+144. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32104
+145. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32105
+146. 10/03/26 20:47:34 sudo (none) ? analyst 32107
+147. 10/03/26 20:47:34 id (none) ? analyst 32111
+148. 10/03/26 20:47:34 id (none) ? analyst 32112
+149. 10/03/26 20:47:34 id (none) ? analyst 32113
+150. 10/03/26 20:47:34 id (none) ? analyst 32114
+151. 10/03/26 20:47:34 id (none) ? analyst 32115
+152. 10/03/26 20:47:34 sudo (none) ? analyst 32118
+153. 10/03/26 20:47:34 sudo (none) ? analyst 32119
+154. 10/03/26 20:47:34 sudo (none) ? analyst 32120
+155. 10/03/26 20:47:34 sudo (none) ? analyst 32121
+156. 10/03/26 20:47:34 sudo (none) ? analyst 32122
+157. 10/03/26 20:47:34 sudo (none) ? analyst 32123
+158. 10/03/26 20:47:34 sudo (none) ? analyst 32124
+159. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32125
+160. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32126
+161. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32127
+162. 10/03/26 20:47:34 sudo (none) ? analyst 32129
+163. 10/03/26 20:47:34 cat (none) ? analyst 32133
+164. 10/03/26 20:47:34 bash (none) ? analyst 32136
+165. 10/03/26 20:47:34 bash (none) 127.0.0.1 analyst 32137
+166. 10/03/26 20:47:34 head (none) ? analyst 32138
+167. 10/03/26 20:47:34 python3 (none) ? analyst 32139
+168. 10/03/26 20:47:34 python3 (none) ::1 analyst 32140
+169. 10/03/26 20:47:34 mktemp (none) ? analyst 32141
+170. 10/03/26 20:47:34 ssh-keygen (none) ? analyst 32142
+171. 10/03/26 20:47:34 ssh-keygen (none) ? analyst 32143
+172. 10/03/26 20:47:34 ssh-keygen (none) ? analyst 32144
+173. 10/03/26 20:47:34 sudo (none) ? analyst 32145
+174. 10/03/26 20:47:34 sudo (none) ? analyst 32146
+175. 10/03/26 20:47:34 sudo (none) ? analyst 32147
+176. 10/03/26 20:47:34 sudo (none) ? analyst 32148
+177. 10/03/26 20:47:34 sudo (none) ? analyst 32149
+178. 10/03/26 20:47:34 sudo (none) ? analyst 32150
+179. 10/03/26 20:47:34 sudo (none) ? analyst 32151
+180. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32152
+181. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32153
+182. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32154
+183. 10/03/26 20:47:34 sudo (none) ? analyst 32156
+184. 10/03/26 20:47:34 install (none) ? analyst 32160
+185. 10/03/26 20:47:34 install (none) ? analyst 32161
+186. 10/03/26 20:47:34 install (none) ? analyst 32162
+187. 10/03/26 20:47:34 install (none) ? analyst 32163
+188. 10/03/26 20:47:34 install (none) ? analyst 32164
+189. 10/03/26 20:47:34 sudo (none) ? analyst 32167
+190. 10/03/26 20:47:34 sudo (none) ? analyst 32168
+191. 10/03/26 20:47:34 sudo (none) ? analyst 32169
+192. 10/03/26 20:47:34 sudo (none) ? analyst 32170
+193. 10/03/26 20:47:34 sudo (none) ? analyst 32171
+194. 10/03/26 20:47:34 sudo (none) ? analyst 32172
+195. 10/03/26 20:47:34 sudo (none) ? analyst 32173
+196. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32174
+197. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32175
+198. 10/03/26 20:47:34 unix_chkpwd (none) ? analyst 32176
+199. 10/03/26 20:47:34 sudo (none) ? analyst 32178
+200. 10/03/26 20:47:34 install (none) ? analyst 32182
+201. 10/03/26 20:47:34 install (none) ? analyst 32183
+202. 10/03/26 20:47:34 install (none) ? analyst 32184
+203. 10/03/26 20:47:34 install (none) ? analyst 32185
+204. 10/03/26 20:47:34 install (none) ? analyst 32186
+205. 10/03/26 20:47:34 ssh (none) ? analyst 32189
+206. 10/03/26 20:47:34 ssh (none) ? analyst 32190
+207. 10/03/26 20:47:34 ssh (none) ? analyst 32191
+208. 10/03/26 20:47:34 ssh (none) 127.0.0.1 analyst 32192
+209. 10/03/26 20:47:34 sshd-session (none) ? unknown(1001) 32195
+210. 10/03/26 20:47:34 sshd-session (none) ? sootmarktest 32196
+211. 10/03/26 20:47:34 sshd-session (none) ? sootmarktest 32197
+212. 10/03/26 20:47:34 sshd-session (none) ? sootmarktest 32198
+213. 10/03/26 20:47:34 sshd-session (none) ? sootmarktest 32199
+214. 10/03/26 20:47:34 systemd ? ? unset 32200
+215. 10/03/26 20:47:34 (systemd) (none) ? unknown(1001) 32203
+216. 10/03/26 20:47:34 (systemd) (none) ? sootmarktest 32204
+217. 10/03/26 20:47:34 (systemd) (none) ? sootmarktest 32205
+218. 10/03/26 20:47:34 (systemd) (none) ? sootmarktest 32206
+219. 10/03/26 20:47:34 (systemd) (none) ? sootmarktest 32207
+220. 10/03/26 20:47:34 systemd (none) ? sootmarktest 32209
+221. 10/03/26 20:47:34 systemd (none) ? sootmarktest 32210
+222. 10/03/26 20:47:34 systemd (none) ? sootmarktest 32211
+223. 10/03/26 20:47:34 30-systemd-envi (none) ? sootmarktest 32212
+224. 10/03/26 20:47:34 30-systemd-envi (none) ? sootmarktest 32213
+225. 10/03/26 20:47:34 systemd-xdg-aut (none) ? sootmarktest 32214
+226. 10/03/26 20:47:34 systemd-xdg-aut (none) ? sootmarktest 32215
+227. 10/03/26 20:47:34 systemd (none) ? sootmarktest 32216
+228. 10/03/26 20:47:34 systemd (none) ? sootmarktest 32217
+229. 10/03/26 20:47:34 systemd (none) ? sootmarktest 32218
+230. 10/03/26 20:47:34 9 (none) ? sootmarktest 32219
+231. 10/03/26 20:47:34 9 (none) ? sootmarktest 32220
+232. 10/03/26 20:47:34 9 (none) ? sootmarktest 32221
+233. 10/03/26 20:47:34 9 (none) ? sootmarktest 32222
+234. 10/03/26 20:47:34 9 (none) ? sootmarktest 32223
+235. 10/03/26 20:47:34 (ystemctl) (none) ? sootmarktest 32224
+236. 10/03/26 20:47:34 9 (none) ? sootmarktest 32225
+237. 10/03/26 20:47:34 (sh) (none) ? sootmarktest 32226
+238. 10/03/26 20:47:34 systemctl (none) ? sootmarktest 32227
+239. 10/03/26 20:47:34 9 (none) ? sootmarktest 32228
+240. 10/03/26 20:47:34 sh (none) ? sootmarktest 32229
+241. 10/03/26 20:47:34 (ystemctl) (none) ? sootmarktest 32230
+242. 10/03/26 20:47:34 gpgconf (none) ? sootmarktest 32231
+243. 10/03/26 20:47:34 systemctl (none) ? sootmarktest 32232
+244. 10/03/26 20:47:34 9 (none) ? sootmarktest 32233
+245. 10/03/26 20:47:34 awk (none) ? sootmarktest 32234
+246. 10/03/26 20:47:34 (ystemctl) (none) ? sootmarktest 32235
+247. 10/03/26 20:47:34 gpg-agent (none) ? sootmarktest 32236
+248. 10/03/26 20:47:34 systemctl (none) ? sootmarktest 32237
+249. 10/03/26 20:47:34 systemctl (none) ? sootmarktest 32238
+250. 10/03/26 20:47:34 systemctl (none) ? sootmarktest 32239
+251. 10/03/26 20:47:34 gpg-agent (none) ? sootmarktest 32240
+252. 10/03/26 20:47:34 systemctl (none) ? sootmarktest 32241
+253. 10/03/26 20:47:34 systemctl (none) ? sootmarktest 32242
+254. 10/03/26 20:47:34 systemctl (none) ? sootmarktest 32243
+255. 10/03/26 20:47:34 systemctl (none) ? sootmarktest 32244
+256. 10/03/26 20:47:34 systemd ? ? unset 32245
+257. 10/03/26 20:47:34 sh (none) ? sootmarktest 32246
+258. 10/03/26 20:47:34 env (none) ? sootmarktest 32247
+259. 10/03/26 20:47:34 env (none) ? sootmarktest 32248
+260. 10/03/26 20:47:34 env (none) ? sootmarktest 32249
+261. 10/03/26 20:47:34 env (none) ? sootmarktest 32250
+262. 10/03/26 20:47:34 run-parts (none) ? sootmarktest 32251
+263. 10/03/26 20:47:34 10-uname (none) ? sootmarktest 32252
+264. 10/03/26 20:47:34 uname (none) ? sootmarktest 32253
+265. 10/03/26 20:47:34 sshd-session (none) ? sootmarktest 32254
+266. 10/03/26 20:47:34 sshd-session (none) ? sootmarktest 32255
+267. 10/03/26 20:47:34 sshd-session (none) ? sootmarktest 32256
+268. 10/03/26 20:47:34 sshd-session (none) ? sootmarktest 32258
+269. 10/03/26 20:47:34 bash pts11 ? sootmarktest 32261
+270. 10/03/26 20:47:34 id pts11 ? sootmarktest 32262
+271. 10/03/26 20:47:34 id pts11 ? sootmarktest 32263
+272. 10/03/26 20:47:34 id pts11 ? sootmarktest 32264
+273. 10/03/26 20:47:34 id pts11 ? sootmarktest 32265
+274. 10/03/26 20:47:34 id pts11 ? sootmarktest 32266
+275. 10/03/26 20:47:34 echo pts11 ? sootmarktest 32267
+276. 10/03/26 20:47:34 sshd-session (none) ? sootmarktest 32268
+277. 10/03/26 20:47:34 ssh (none) ? analyst 32269
+278. 10/03/26 20:47:34 ssh (none) ? analyst 32270
+279. 10/03/26 20:47:34 ssh (none) ? analyst 32271
+280. 10/03/26 20:47:34 ssh (none) 127.0.0.1 analyst 32272
+281. 10/03/26 20:47:34 sshd-session (none) ? sootmarktest 32273
+282. 10/03/26 20:47:34 sshd-session (none) ? sootmarktest 32274
+283. 10/03/26 20:47:34 rm (none) ? analyst 32280
+284. 10/03/26 20:47:36 9 (none) ? sootmarktest 32303
+285. 10/03/26 20:47:36 9 (none) ? sootmarktest 32304
+286. 10/03/26 20:47:36 9 (none) ? sootmarktest 32305
+287. 10/03/26 20:47:36 9 (none) ? sootmarktest 32306
+288. 10/03/26 20:47:36 9 (none) ? sootmarktest 32307
+289. 10/03/26 20:47:36 9 (none) ? sootmarktest 32308
+290. 10/03/26 20:47:36 (sh) (none) ? sootmarktest 32309
+291. 10/03/26 20:47:36 (ystemctl) (none) ? sootmarktest 32310
+292. 10/03/26 20:47:36 (ystemctl) (none) ? sootmarktest 32311
+293. 10/03/26 20:47:36 systemctl (none) ? sootmarktest 32312
+294. 10/03/26 20:47:36 sh (none) ? sootmarktest 32313
+295. 10/03/26 20:47:36 systemctl (none) ? sootmarktest 32314
+296. 10/03/26 20:47:36 gpgconf (none) ? sootmarktest 32315
+297. 10/03/26 20:47:36 awk (none) ? sootmarktest 32316
+298. 10/03/26 20:47:36 gpg-agent (none) ? sootmarktest 32317
+299. 10/03/26 20:47:36 gpg-agent (none) ? sootmarktest 32318
+300. 10/03/26 20:47:36 systemctl (none) ? sootmarktest 32319
+301. 10/03/26 20:47:36 systemctl (none) ? sootmarktest 32320
+302. 10/03/26 20:47:36 systemctl (none) ? sootmarktest 32321
+303. 10/03/26 20:47:36 systemctl (none) ? sootmarktest 32322
+304. 10/03/26 20:47:36 systemd (none) ? sootmarktest 32323
+305. 10/03/26 20:47:36 systemd (none) ? sootmarktest 32324
+306. 10/03/26 20:47:36 (sd-pam) (none) ? sootmarktest 32325
+307. 10/03/26 20:47:36 systemd ? ? unset 32326
+308. 10/03/26 20:47:36 systemd ? ? unset 32327
+309. 10/03/26 20:47:38 userdel (none) ? unset 32332
+310. 10/03/26 20:47:38 userdel (none) ? unset 32333
+311. 10/03/26 20:47:38 userdel (none) ? unset 32342
+312. 10/03/26 20:47:38 userdel (none) ? unset 32343
+313. 10/03/26 20:47:38 rmdir (none) ? unset 32354
+314. 10/03/26 20:47:39 auditctl (none) ? unset 32359
+315. 10/03/26 20:47:39 auditctl (none) ? unset 32360
+316. 10/03/26 20:47:39 auditctl (none) ? unset 32361
+317. 10/03/26 20:47:39 auditctl (none) ? unset 32362
+### aureport --host
+
+Host Report
+===================================
+# date time host syscall auid event
+===================================
+1. 10/03/26 20:47:31 ? ? unset 31881
+2. 10/03/26 20:47:31 ? ? unset 31882
+3. 10/03/26 20:47:32 ? ? unset 31883
+4. 10/03/26 20:47:32 ? ? unset 31885
+5. 10/03/26 20:47:32 ? ? unset 31886
+6. 10/03/26 20:47:32 ? ? unset 31888
+7. 10/03/26 20:47:32 ? ? unset 31889
+8. 10/03/26 20:47:33 ? ? unset 31890
+9. 10/03/26 20:47:33 ? ? unset 31892
+10. 10/03/26 20:47:33 ? ? unset 31893
+11. 10/03/26 20:47:33 ? ? unset 31895
+12. 10/03/26 20:47:33 ? ? unset 31896
+13. 10/03/26 20:47:33 ? ? unset 31897
+14. 10/03/26 20:47:33 ? ? unset 31899
+15. 10/03/26 20:47:33 ? ? unset 31900
+16. 10/03/26 20:47:33 ? ? unset 31902
+17. 10/03/26 20:47:33 ? ? unset 31903
+18. 10/03/26 20:47:33 ? ? unset 31904
+19. 10/03/26 20:47:33 ? ? unset 31906
+20. 10/03/26 20:47:33 ? ? unset 31907
+21. 10/03/26 20:47:33 ? ? unset 31909
+22. 10/03/26 20:47:33 ? ? unset 31910
+23. 10/03/26 20:47:33 ? ? unset 31911
+24. 10/03/26 20:47:33 ? ? unset 31913
+25. 10/03/26 20:47:33 ? ? unset 31914
+26. 10/03/26 20:47:33 ? ? unset 31916
+27. 10/03/26 20:47:33 ? ? unset 31917
+28. 10/03/26 20:47:33 ? ? unset 31918
+29. 10/03/26 20:47:33 ? ? unset 31920
+30. 10/03/26 20:47:33 ? ? unset 31921
+31. 10/03/26 20:47:33 ? ? unset 31922
+32. 10/03/26 20:47:33 ? ? unset 31923
+33. 10/03/26 20:47:34 ? ? unset 31924
+34. 10/03/26 20:47:34 ? ? unset 31926
+35. 10/03/26 20:47:34 ? ? unset 31927
+36. 10/03/26 20:47:34 ? ? analyst 31940
+37. 10/03/26 20:47:34 ? ? analyst 31943
+38. 10/03/26 20:47:34 ? ? analyst 31944
+39. 10/03/26 20:47:34 ? ? analyst 31956
+40. 10/03/26 20:47:34 ? ? analyst 31959
+41. 10/03/26 20:47:34 ? ? analyst 31960
+42. 10/03/26 20:47:34 ? ? analyst 31967
+43. 10/03/26 20:47:34 ? ? analyst 31969
+44. 10/03/26 20:47:34 ? ? analyst 31973
+45. 10/03/26 20:47:34 ? ? analyst 31974
+46. 10/03/26 20:47:34 ? ? analyst 31985
+47. 10/03/26 20:47:34 ? ? analyst 31988
+48. 10/03/26 20:47:34 ? ? analyst 31989
+49. 10/03/26 20:47:34 ? ? analyst 32003
+50. 10/03/26 20:47:34 ? ? analyst 32007
+51. 10/03/26 20:47:34 ? ? analyst 32008
+52. 10/03/26 20:47:34 ? ? analyst 32009
+53. 10/03/26 20:47:34 ? ? analyst 32016
+54. 10/03/26 20:47:34 ? ? analyst 32017
+55. 10/03/26 20:47:34 ? ? analyst 32018
+56. 10/03/26 20:47:34 ? ? analyst 32029
+57. 10/03/26 20:47:34 ? ? analyst 32032
+58. 10/03/26 20:47:34 ? ? analyst 32033
+59. 10/03/26 20:47:34 ? ? analyst 32048
+60. 10/03/26 20:47:34 ? ? analyst 32050
+61. 10/03/26 20:47:34 ? ? analyst 32051
+62. 10/03/26 20:47:34 ? ? analyst 32062
+63. 10/03/26 20:47:34 ? ? analyst 32065
+64. 10/03/26 20:47:34 ? ? analyst 32066
+65. 10/03/26 20:47:34 ? ? analyst 32074
+66. 10/03/26 20:47:34 ? ? analyst 32076
+67. 10/03/26 20:47:34 ? ? analyst 32081
+68. 10/03/26 20:47:34 ? ? analyst 32082
+69. 10/03/26 20:47:34 ? ? analyst 32106
+70. 10/03/26 20:47:34 ? ? analyst 32109
+71. 10/03/26 20:47:34 ? ? analyst 32110
+72. 10/03/26 20:47:34 ? ? analyst 32116
+73. 10/03/26 20:47:34 ? ? analyst 32117
+74. 10/03/26 20:47:34 ? ? analyst 32128
+75. 10/03/26 20:47:34 ? ? analyst 32131
+76. 10/03/26 20:47:34 ? ? analyst 32132
+77. 10/03/26 20:47:34 ? ? analyst 32134
+78. 10/03/26 20:47:34 ? ? analyst 32135
+79. 10/03/26 20:47:34 127.0.0.1 connect analyst 32137
+80. 10/03/26 20:47:34 ::1 connect analyst 32140
+81. 10/03/26 20:47:34 ? ? analyst 32155
+82. 10/03/26 20:47:34 ? ? analyst 32158
+83. 10/03/26 20:47:34 ? ? analyst 32159
+84. 10/03/26 20:47:34 ? ? analyst 32165
+85. 10/03/26 20:47:34 ? ? analyst 32166
+86. 10/03/26 20:47:34 ? ? analyst 32177
+87. 10/03/26 20:47:34 ? ? analyst 32180
+88. 10/03/26 20:47:34 ? ? analyst 32181
+89. 10/03/26 20:47:34 ? ? analyst 32187
+90. 10/03/26 20:47:34 ? ? analyst 32188
+91. 10/03/26 20:47:34 127.0.0.1 connect analyst 32192
+92. 10/03/26 20:47:34 127.0.0.1 ? unset 32193
+93. 10/03/26 20:47:34 127.0.0.1 ? unset 32194
+94. 10/03/26 20:47:34 ? ? unset 32200
+95. 10/03/26 20:47:34 ? ? unset 32201
+96. 10/03/26 20:47:34 ? ? unset 32202
+97. 10/03/26 20:47:34 ? ? sootmarktest 32208
+98. 10/03/26 20:47:34 ? ? unset 32245
+99. 10/03/26 20:47:34 127.0.0.1 ? sootmarktest 32257
+100. 10/03/26 20:47:34 127.0.0.1 ? sootmarktest 32259
+101. 10/03/26 20:47:34 127.0.0.1 ? sootmarktest 32260
+102. 10/03/26 20:47:34 127.0.0.1 connect analyst 32272
+103. 10/03/26 20:47:34 127.0.0.1 ? sootmarktest 32275
+104. 10/03/26 20:47:34 127.0.0.1 ? sootmarktest 32276
+105. 10/03/26 20:47:34 127.0.0.1 ? unset 32277
+106. 10/03/26 20:47:34 127.0.0.1 ? unset 32278
+107. 10/03/26 20:47:34 127.0.0.1 ? unset 32279
+108. 10/03/26 20:47:34 ? ? analyst 32281
+109. 10/03/26 20:47:34 ? ? analyst 32282
+110. 10/03/26 20:47:34 ? ? unset 32283
+111. 10/03/26 20:47:34 ? ? unset 32284
+112. 10/03/26 20:47:35 ? ? unset 32285
+113. 10/03/26 20:47:35 ? ? unset 32287
+114. 10/03/26 20:47:35 ? ? unset 32288
+115. 10/03/26 20:47:35 ? ? unset 32289
+116. 10/03/26 20:47:35 ? ? unset 32290
+117. 10/03/26 20:47:35 ? ? unset 32291
+118. 10/03/26 20:47:35 ? ? unset 32293
+119. 10/03/26 20:47:35 ? ? unset 32294
+120. 10/03/26 20:47:35 ? ? unset 32295
+121. 10/03/26 20:47:35 ? ? unset 32296
+122. 10/03/26 20:47:36 ? ? unset 32297
+123. 10/03/26 20:47:36 ? ? unset 32299
+124. 10/03/26 20:47:36 ? ? unset 32300
+125. 10/03/26 20:47:36 ? ? unset 32301
+126. 10/03/26 20:47:36 ? ? unset 32302
+127. 10/03/26 20:47:36 ? ? unset 32326
+128. 10/03/26 20:47:36 ? ? unset 32327
+129. 10/03/26 20:47:38 ? ? unset 32328
+130. 10/03/26 20:47:38 ? ? unset 32330
+131. 10/03/26 20:47:38 ? ? unset 32331
+132. 10/03/26 20:47:38 ? ? unset 32334
+133. 10/03/26 20:47:38 ? ? unset 32335
+134. 10/03/26 20:47:38 ? ? unset 32336
+135. 10/03/26 20:47:38 ? ? unset 32337
+136. 10/03/26 20:47:38 ? ? unset 32338
+137. 10/03/26 20:47:38 ? ? unset 32339
+138. 10/03/26 20:47:38 ? ? unset 32340
+139. 10/03/26 20:47:38 ? ? unset 32341
+140. 10/03/26 20:47:38 ? ? unset 32344
+141. 10/03/26 20:47:38 ? ? unset 32345
+142. 10/03/26 20:47:38 ? ? unset 32346
+143. 10/03/26 20:47:38 ? ? unset 32348
+144. 10/03/26 20:47:38 ? ? unset 32349
+145. 10/03/26 20:47:38 ? ? unset 32350
+146. 10/03/26 20:47:38 ? ? unset 32351
+147. 10/03/26 20:47:38 ? ? unset 32352
+148. 10/03/26 20:47:38 ? ? unset 32353
+149. 10/03/26 20:47:39 ? ? unset 32355
+150. 10/03/26 20:47:39 ? ? unset 32357
+151. 10/03/26 20:47:39 ? ? unset 32358
+152. 10/03/26 20:47:39 ? ? unset 32363
+153. 10/03/26 20:47:39 ? ? unset 32364
+154. 10/03/26 20:47:40 ? ? unset 32365
+155. 10/03/26 20:47:40 ? ? unset 32367
+156. 10/03/26 20:47:40 ? ? unset 32368

@@ -1,0 +1,97 @@
+----
+type=ADD_GROUP msg=audit(12/07/16 02:16:32.414:385) : pid=1235 uid=root auid=unset ses=unset subj=system_u:system_r:unconfined_service_t:s0 msg='op=add-group id=unknown(1000) exe=/usr/sbin/groupadd hostname=? addr=? terminal=? res=success' 
+----
+type=ADD_USER msg=audit(12/07/16 02:16:32.488:389) : pid=1264 uid=root auid=unset ses=unset subj=system_u:system_r:unconfined_service_t:s0 msg='op=add-user id=unknown(1000) exe=/usr/sbin/useradd hostname=? addr=? terminal=? res=success' 
+----
+type=CRED_ACQ msg=audit(12/07/16 02:17:23.057:413) : pid=1298 uid=root auid=unset ses=unset subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_unix acct=andrew_kroh exe=/usr/sbin/sshd hostname=pool-96-241-146-97.washdc.fios.verizon.net addr=96.241.146.97 terminal=ssh res=success' 
+----
+type=CRED_DISP msg=audit(12/07/16 02:17:29.058:427) : pid=1298 uid=root auid=unknown(1000) ses=1 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_unix acct=andrew_kroh exe=/usr/sbin/sshd hostname=pool-96-241-146-97.washdc.fios.verizon.net addr=96.241.146.97 terminal=ssh res=success' 
+----
+type=CONFIG_CHANGE msg=audit(12/07/16 02:20:31.371:478) : auid=unknown(1000) ses=3 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 op="add_rule" key=(null) list=exit res=yes 
+----
+type=BPRM_FCAPS msg=audit(12/07/16 02:21:48.360:529) : fver=0 fp=none fi=none fe=0 old_pp=none old_pi=none old_pe=none new_pp=chown,dac_override,dac_read_search,fowner,fsetid,kill,setgid,setuid,setpcap,linux_immutable,net_bind_service,net_broadcast,net_admin,net_raw,ipc_lock,ipc_owner,sys_module,sys_rawio,sys_chroot,sys_ptrace,sys_pacct,sys_admin,sys_boot,sys_nice,sys_resource,sys_time,sys_tty_config,mknod,lease,audit_write,audit_control,setfcap,mac_override,mac_admin,syslog,wake_alarm,block_suspend new_pi=none new_pe=chown,dac_override,dac_read_search,fowner,fsetid,kill,setgid,setuid,setpcap,linux_immutable,net_bind_service,net_broadcast,net_admin,net_raw,ipc_lock,ipc_owner,sys_module,sys_rawio,sys_chroot,sys_ptrace,sys_pacct,sys_admin,sys_boot,sys_nice,sys_resource,sys_time,sys_tty_config,mknod,lease,audit_write,audit_control,setfcap,mac_override,mac_admin,syslog,wake_alarm,block_suspend 
+----
+type=CRED_REFR msg=audit(03/16/17 05:01:01.198:480) : pid=1402 uid=root auid=root ses=2 subj=system_u:system_r:crond_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_unix acct=root exe=/usr/sbin/crond hostname=? addr=? terminal=cron res=success' 
+----
+type=CRYPTO_KEY_USER msg=audit(12/07/16 02:17:21.497:404) : pid=1299 uid=root auid=unset ses=unset subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=destroy kind=server fp=6d:a3:7f:ed:de:4a:79:f2:aa:49:ec:d1:75:36:97:a3 direction=? spid=1299 suid=root  exe=/usr/sbin/sshd hostname=? addr=96.241.146.97 terminal=? res=success' 
+----
+type=CRYPTO_SESSION msg=audit(12/07/16 02:17:21.515:406) : pid=1298 uid=root auid=unset ses=unset subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=start direction=from-server cipher=chacha20-poly1305@openssh.com ksize=512 mac= pfs=curve25519-sha256@libssh.org spid=1299 suid=unknown(74) rport=63927 laddr=10.142.0.2 lport=22  exe=/usr/sbin/sshd hostname=? addr=96.241.146.97 terminal=? res=success' 
+----
+type=CWD msg=audit(12/07/16 02:20:31.371:479) :  cwd=/home/andrew_kroh 
+----
+type=DAEMON_CONFIG msg=audit(03/23/17 03:30:00.477:34)  config changed, auid=root pid=1512 subj=system_u:system_r:unconfined_service_t:s0 res=success 
+----
+type=DAEMON_END msg=audit(12/07/16 02:44:57.892:7799) : auditd normal halt, sending auid=root pid=? subj=? res=success 
+----
+type=DAEMON_START msg=audit(12/07/16 02:16:23.819:7798) : auditd start, ver=2.4.1 format=raw kernel=3.10.0-327.36.3.el7.x86_64 auid=unset pid=251 subj=system_u:system_r:auditd_t:s0 res=success 
+----
+type=GRP_MGMT msg=audit(12/07/16 02:16:32.419:386) : pid=1235 uid=root auid=unset ses=unset subj=system_u:system_r:unconfined_service_t:s0 msg='op=add-shadow-group id=unknown(1000) exe=/usr/sbin/groupadd hostname=? addr=? terminal=? res=success' 
+----
+type=SERVICE_START msg=audit(12/07/16 02:16:23.864:6) : pid=1 uid=root auid=unset ses=unset subj=system_u:system_r:init_t:s0 msg='unit=auditd comm=systemd exe=/usr/lib/systemd/systemd hostname=? addr=? terminal=? res=success' 
+----
+type=SERVICE_STOP msg=audit(12/07/16 02:16:24.534:16) : pid=1 uid=root auid=unset ses=unset subj=system_u:system_r:init_t:s0 msg='unit=irqbalance comm=systemd exe=/usr/lib/systemd/systemd hostname=? addr=? terminal=? res=success' 
+----
+type=NETFILTER_CFG msg=audit(12/07/16 02:16:24.827:17) : table=filter family=ipv4 entries=0 
+----
+type=LOGIN msg=audit(12/07/16 02:17:23.057:414) : pid=1298 uid=root subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 old-auid=unset auid=unknown(1000) old-ses=4294967295 ses=1 res=yes 
+----
+type=PATH msg=audit(12/07/16 02:20:31.371:479) : item=0 name=/sbin/auditctl inode=17367907 dev=08:01 mode=file,750 ouid=root ogid=root rdev=00:00 obj=system_u:object_r:auditctl_exec_t:s0 objtype=NORMAL 
+type=EXECVE msg=audit(12/07/16 02:20:31.371:479) : argc=7 a0=auditctl a1=-a a2=exit,always a3=-F a4=arch=b32 a5=-S a6=execve 
+----
+type=SOCKADDR msg=audit(12/07/16 02:40:24.953:688) : saddr={ saddr_fam=inet laddr=169.254.169.254 lport=80 } 
+----
+type=SYSCALL msg=audit(12/07/16 02:16:24.827:17) : arch=x86_64 syscall=finit_module success=yes exit=0 a0=0x0 a1=0x41a15c a2=0x0 a3=0x0 items=0 ppid=390 pid=391 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=modprobe exe=/usr/bin/kmod subj=system_u:system_r:insmod_t:s0 key=(null) 
+----
+type=SYSTEM_BOOT msg=audit(12/07/16 02:16:23.876:7) : pid=273 uid=root auid=unset ses=unset subj=system_u:system_r:init_t:s0 msg=' comm=systemd-update-utmp exe=/usr/lib/systemd/systemd-update-utmp hostname=? addr=? terminal=? res=success' 
+----
+type=SYSTEM_RUNLEVEL msg=audit(12/07/16 02:16:32.492:390) : pid=1279 uid=root auid=unset ses=unset subj=system_u:system_r:init_t:s0 msg='old-level=N new-level=3 comm=systemd-update-utmp exe=/usr/lib/systemd/systemd-update-utmp hostname=? addr=? terminal=? res=success' 
+----
+type=USER_ACCT msg=audit(12/07/16 02:17:23.052:410) : pid=1298 uid=root auid=unset ses=unset subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct=andrew_kroh exe=/usr/sbin/sshd hostname=pool-96-241-146-97.washdc.fios.verizon.net addr=96.241.146.97 terminal=ssh res=success' 
+----
+type=USER_AUTH msg=audit(12/07/16 02:17:23.046:408) : pid=1298 uid=root auid=unset ses=unset subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=pubkey_auth rport=63927 acct=andrew_kroh exe=/usr/sbin/sshd hostname=? addr=96.241.146.97 terminal=? res=success' 
+----
+type=USER_CMD msg=audit(12/07/16 02:20:31.363:475) : pid=1382 uid=unknown(1000) auid=unknown(1000) ses=3 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd=/home/andrew_kroh cmd=./metricbeat -c mb.dev.yml terminal=pts/0 res=success' 
+----
+type=USER_END msg=audit(12/07/16 02:17:29.033:423) : pid=1298 uid=root auid=unknown(1000) ses=1 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=login id=unknown(1000) exe=/usr/sbin/sshd hostname=? addr=? terminal=/dev/pts/0 res=success' 
+----
+type=USER_ERR msg=audit(03/16/17 05:13:27.587:518) : pid=1560 uid=root auid=unset ses=unset subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=PAM:bad_ident grantors=? acct=? exe=/usr/sbin/sshd hostname=190.48.233.76 addr=190.48.233.76 terminal=ssh res=failed' 
+----
+type=USER_LOGIN msg=audit(12/07/16 02:17:23.193:421) : pid=1298 uid=root auid=unknown(1000) ses=1 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=login id=unknown(1000) exe=/usr/sbin/sshd hostname=pool-96-241-146-97.washdc.fios.verizon.net addr=96.241.146.97 terminal=/dev/pts/0 res=success' 
+----
+type=USER_LOGOUT msg=audit(12/07/16 02:17:29.033:424) : pid=1298 uid=root auid=unknown(1000) ses=1 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=login id=unknown(1000) exe=/usr/sbin/sshd hostname=? addr=? terminal=/dev/pts/0 res=success' 
+----
+type=USER_MGMT msg=audit(12/07/16 02:16:32.521:393) : pid=1264 uid=root auid=unset ses=unset subj=system_u:system_r:unconfined_service_t:s0 msg='op=add-home-dir id=unknown(1000) exe=/usr/sbin/useradd hostname=? addr=? terminal=? res=success' 
+----
+type=USER_ROLE_CHANGE msg=audit(12/07/16 02:17:23.140:415) : pid=1298 uid=root auid=unknown(1000) ses=1 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='pam: default-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 selected-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 exe=/usr/sbin/sshd hostname=pool-96-241-146-97.washdc.fios.verizon.net addr=96.241.146.97 terminal=ssh res=success' 
+----
+type=USER_START msg=audit(12/07/16 02:17:23.170:416) : pid=1298 uid=root auid=unknown(1000) ses=1 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_selinux,pam_namespace,pam_keyinit,pam_keyinit,pam_limits,pam_systemd,pam_unix,pam_lastlog acct=andrew_kroh exe=/usr/sbin/sshd hostname=pool-96-241-146-97.washdc.fios.verizon.net addr=96.241.146.97 terminal=ssh res=success' 
+----
+type=USYS_CONFIG msg=audit(12/07/16 02:16:33.000:402) : pid=1232 uid=root auid=unset ses=unset subj=system_u:system_r:unconfined_service_t:s0 msg='changing system time exe=/usr/sbin/hwclock hostname=? addr=? terminal=? res=success' 
+----
+type=SYSCALL msg=audit(03/29/17 15:30:06.273:512226) : arch=x86_64 syscall=connect success=no exit=EINPROGRESS(Operation now in progress) a0=0x6 a1=0x7ffeb50e4570 a2=0x10 a3=0xfe items=0 ppid=1 pid=1170 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=google_ip_forwa exe=/usr/bin/python2.7;58d1ccfb (deleted) subj=system_u:system_r:unconfined_service_t:s0 key=(null) 
+----
+type=SOCKADDR msg=audit(03/29/17 19:48:44.990:517643) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+----
+type=SOCKADDR msg=audit(03/29/17 19:48:44.990:517644) : saddr={ saddr_fam=inet6 laddr=:: lport=22 } 
+----
+type=SOCKADDR msg=audit(03/29/17 19:48:44.990:517645) : saddr=unknown-family(0) 
+----
+type=SOCKADDR msg=audit(03/29/17 19:48:44.990:517647) : saddr={ saddr_fam=local path=/var/run/nscd/socket } 
+----
+type=USER_TTY msg=audit(04/11/17 14:57:51.974:1065045) : pid=28202 uid=root auid=unknown(1000) ses=762 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 data="exit"
+----
+type=USER_TTY msg=audit(04/11/17 14:58:01.082:1065050) : pid=28058 uid=root auid=unknown(1000) ses=762 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 data="su - andrew_kroh"
+----
+type=TTY msg=audit(04/11/17 15:21:03.550:1065565) : tty pid=27930 uid=unknown(1000) auid=unknown(1000) ses=762 major=136 minor=0 comm=bash data="eh",<backspace>,<backspace>,"echo test",<ret>,"vim /etc/pam.d/password-auth-ac",<ret>,"man pam_tty_audit",<ret>,"man pam.d",<ret>,"vim /etc",<^A>,"sudo ",<^E>,"/pamd.sy",<backspace>,<backspace>,<backspace>,<backspace>,<backspace>,".",<backspace>,"m.d/sy",<tab>,"-a",<tab>,"a",<backspace>,"-a",<tab>,<ret>,"man pam",<ret>,"t",<backspace>,"grep sys",<backspace>,<backspace>,<backspace>,"/var/lo",<tab>,"g/me",<tab>,"s",<tab>," | grep pam_tty",<ret>,"grep pam_tty /var/log/mes",<tab>,<ret>,<up>,<^A>,"sudo ",<ret>,"sudo su",<ret>
+----
+type=EXECVE msg=audit(04/10/17 22:24:46.221:1050925) : argc=5 a0=grep a1=--color=auto a2=-e a3=[:alpha:] a4=/etc/passwd 
+----
+type=EXECVE msg=audit(04/11/17 17:16:37.196:1068053) : argc=4 a0=cat a1=btest=test a2=-f a3=regex=8 
+----
+type=EXECVE msg=audit(04/11/17 21:34:31.575:1075898) : argc=3 a0=jq a1=. a2={\012        "dev": "08:01",\012        "inode": "19549646",\012        "item": "0",\012        "mode": "0100775",\012        "name": "/usr/bin/jq",\012        "obj": "unconfined_u:object_r:user_home_t:s0",\012        "objtype": "NORMAL",\012        "ogid": "1001",\012        "ouid": "1000",\012        "raw_message": "audit(1491946296.757:1075834): item=0 name=\"/usr/bin/jq\" inode=19549646 dev=08:01 mode=0100775 ouid=1000 ogid=1001 rdev=00:00 obj=unconfined_u:object_r:user_home_t:s0 objtype=NORMAL",\012        "rdev": "00:00",\012        "record_type": "PATH",\012        "sequence": 1075834\012      } 
+----
+type=SYSCALL msg=audit(04/12/17 12:42:20.864:1095517) : arch=x86_64 syscall=kill success=yes exit=0 a0=0x1fde a1=SIGHUP a2=0x0 a3=0x8 items=0 ppid=1 pid=8158 auid=unknown(1000) uid=unknown(1000) gid=unknown(1001) euid=unknown(1000) suid=unknown(1000) fsuid=unknown(1000) egid=unknown(1001) sgid=unknown(1001) fsgid=unknown(1001) tty=(none) ses=790 comm=bash exe=/usr/bin/bash subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key=kill_signals 
+----
+type=CONFIG_CHANGE msg=audit(04/21/17 04:37:47.018:1209) : auid=unset ses=unset subj=system_u:system_r:unconfined_service_t:s0 op="add_rule" key=pam list=exit res=yes 
+----
+type=CWD msg=audit(07/21/17 18:28:19.656:1208725) :  cwd=/tmp/a b c 

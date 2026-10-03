@@ -1,0 +1,138 @@
+### aureport --summary
+
+Summary Report
+======================
+Range of time in logs: 12/07/16 02:16:32.414 - 07/21/17 18:28:19.656
+Selected time for report: 12/07/16 02:16:32 - 07/21/17 18:28:19.656
+Number of changes in configuration: 4
+Number of changes to accounts, groups, or roles: 4
+Number of logins: 1
+Number of failed logins: 0
+Number of authentications: 1
+Number of failed authentications: 0
+Number of users: 3
+Number of terminals: 6
+Number of host names: 6
+Number of executables: 10
+Number of commands: 5
+Number of files: 2
+Number of AVC's: 0
+Number of MAC events: 1
+Number of failed syscalls: 1
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 2
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 2
+Number of process IDs: 20
+Number of events: 47
+
+### aureport --login
+
+Login Report
+============================================
+# date time auid host term exe success event
+============================================
+1. 12/07/16 02:17:23 unknown(1000) pool-96-241-146-97.washdc.fios.verizon.net /dev/pts/0 /usr/sbin/sshd yes 421
+### aureport --auth
+
+Authentication Report
+============================================
+# date time acct host term exe success event
+============================================
+1. 12/07/16 02:17:23 andrew_kroh 96.241.146.97 ? /usr/sbin/sshd yes 408
+### aureport --mods
+
+Account Modifications Report
+=================================================
+# date time auid addr term exe acct success event
+=================================================
+1. 12/07/16 02:16:32 unset ? ? /usr/sbin/groupadd ? yes 385
+2. 12/07/16 02:16:32 unset ? ? /usr/sbin/useradd ? yes 389
+3. 12/07/16 02:16:32 unset ? ? /usr/sbin/groupadd ? yes 386
+4. 12/07/16 02:16:32 unset ? ? /usr/sbin/useradd ? yes 393
+### aureport --executable
+
+Executable Report
+====================================
+# date time exe term host auid event
+====================================
+1. 12/07/16 02:16:32 /usr/sbin/groupadd ? ? unset 385
+2. 12/07/16 02:16:32 /usr/sbin/useradd ? ? unset 389
+3. 12/07/16 02:17:23 /usr/sbin/sshd ssh pool-96-241-146-97.washdc.fios.verizon.net unset 413
+4. 12/07/16 02:17:29 /usr/sbin/sshd ssh pool-96-241-146-97.washdc.fios.verizon.net unknown(1000) 427
+5. 03/16/17 05:01:01 /usr/sbin/crond cron ? root 480
+6. 12/07/16 02:17:21 /usr/sbin/sshd ? 96.241.146.97 unset 404
+7. 12/07/16 02:17:21 /usr/sbin/sshd ? 96.241.146.97 unset 406
+8. 12/07/16 02:16:32 /usr/sbin/groupadd ? ? unset 386
+9. 12/07/16 02:16:23 /usr/lib/systemd/systemd ? ? unset 6
+10. 12/07/16 02:16:24 /usr/lib/systemd/systemd ? ? unset 16
+11. 12/07/16 02:16:24 /usr/bin/kmod (none) ? unset 17
+12. 12/07/16 02:16:23 /usr/lib/systemd/systemd-update-utmp ? ? unset 7
+13. 12/07/16 02:16:32 /usr/lib/systemd/systemd-update-utmp ? ? unset 390
+14. 12/07/16 02:17:23 /usr/sbin/sshd ssh pool-96-241-146-97.washdc.fios.verizon.net unset 410
+15. 12/07/16 02:17:23 /usr/sbin/sshd ? 96.241.146.97 unset 408
+16. 12/07/16 02:17:29 /usr/sbin/sshd /dev/pts/0 ? unknown(1000) 423
+17. 03/16/17 05:13:27 /usr/sbin/sshd ssh 190.48.233.76 unset 518
+18. 12/07/16 02:17:23 /usr/sbin/sshd /dev/pts/0 pool-96-241-146-97.washdc.fios.verizon.net unknown(1000) 421
+19. 12/07/16 02:17:29 /usr/sbin/sshd /dev/pts/0 ? unknown(1000) 424
+20. 12/07/16 02:16:32 /usr/sbin/useradd ? ? unset 393
+21. 12/07/16 02:17:23 /usr/sbin/sshd ssh pool-96-241-146-97.washdc.fios.verizon.net unknown(1000) 415
+22. 12/07/16 02:17:23 /usr/sbin/sshd ssh pool-96-241-146-97.washdc.fios.verizon.net unknown(1000) 416
+23. 12/07/16 02:16:33 /usr/sbin/hwclock ? ? unset 402
+24. 03/29/17 15:30:06 /usr/bin/python2.7;58d1ccfb (deleted) (none) ? unset 512226
+25. 04/12/17 12:42:20 /usr/bin/bash (none) ? unknown(1000) 1095517
+### aureport --syscall
+
+Syscall Report
+=======================================
+# date time syscall pid comm auid event
+=======================================
+1. 12/07/16 02:16:24 finit_module 391 modprobe unset 17
+2. 03/29/17 15:30:06 connect 1170 google_ip_forwa unset 512226
+3. 04/12/17 12:42:20 kill 8158 bash unknown(1000) 1095517
+### aureport --comm
+
+Command Report
+====================================
+# date time comm term host auid event
+=====================================
+1. 12/07/16 02:16:23 systemd ? ? unset 6
+2. 12/07/16 02:16:24 systemd ? ? unset 16
+3. 12/07/16 02:16:24 modprobe (none) ? unset 17
+4. 12/07/16 02:16:23 systemd-update-utmp ? ? unset 7
+5. 12/07/16 02:16:32 systemd-update-utmp ? ? unset 390
+6. 03/29/17 15:30:06 google_ip_forwa (none) ? unset 512226
+7. 04/11/17 15:21:03 bash ? ? unknown(1000) 1065565
+8. 04/12/17 12:42:20 bash (none) ? unknown(1000) 1095517
+### aureport --host
+
+Host Report
+===================================
+# date time host syscall auid event
+===================================
+1. 12/07/16 02:16:32 ? ? unset 385
+2. 12/07/16 02:16:32 ? ? unset 389
+3. 12/07/16 02:17:23 pool-96-241-146-97.washdc.fios.verizon.net ? unset 413
+4. 12/07/16 02:17:29 pool-96-241-146-97.washdc.fios.verizon.net ? unknown(1000) 427
+5. 03/16/17 05:01:01 ? ? root 480
+6. 12/07/16 02:17:21 96.241.146.97 ? unset 404
+7. 12/07/16 02:17:21 96.241.146.97 ? unset 406
+8. 12/07/16 02:16:32 ? ? unset 386
+9. 12/07/16 02:16:23 ? ? unset 6
+10. 12/07/16 02:16:24 ? ? unset 16
+11. 12/07/16 02:40:24 169.254.169.254 ? unknown(-2) 688
+12. 12/07/16 02:16:23 ? ? unset 7
+13. 12/07/16 02:16:32 ? ? unset 390
+14. 12/07/16 02:17:23 pool-96-241-146-97.washdc.fios.verizon.net ? unset 410
+15. 12/07/16 02:17:23 96.241.146.97 ? unset 408
+16. 12/07/16 02:17:29 ? ? unknown(1000) 423
+17. 03/16/17 05:13:27 190.48.233.76 ? unset 518
+18. 12/07/16 02:17:23 pool-96-241-146-97.washdc.fios.verizon.net ? unknown(1000) 421
+19. 12/07/16 02:17:29 ? ? unknown(1000) 424
+20. 12/07/16 02:16:32 ? ? unset 393
+21. 12/07/16 02:17:23 pool-96-241-146-97.washdc.fios.verizon.net ? unknown(1000) 415
+22. 12/07/16 02:17:23 pool-96-241-146-97.washdc.fios.verizon.net ? unknown(1000) 416
+23. 12/07/16 02:16:33 ? ? unset 402
+24. 03/29/17 19:48:44 :: ? unknown(-2) 517644

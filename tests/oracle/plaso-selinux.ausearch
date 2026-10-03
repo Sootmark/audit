@@ -1,0 +1,20 @@
+----
+type=SHORTDATE msg=audit(05/24/12 07:40:01.000:0) : check rounding
+
+type=WRONGDATE msg=audit(05/24/12 07:40:01.000:0) : missing milliseconds, should be skipped by parser
+
+----
+type=LOGIN msg=audit(05/24/12 07:40:01.174:94983) : pid=25443 uid=root old auid=unset new auid=root old ses=unset new ses=1165 
+----
+type=NOMSG msg=audit(05/24/12 07:40:22.174:94984) :
+
+----
+type= msg=audit(05/24/12 07:42:13.174:94984) : missing type value, should be skipped by parser
+
+----
+type=UNDER_SCORE msg=audit(05/24/12 07:47:46.174:94984) : pid=25444 uid=root old auid=unset new auid=unknown(54321) old ses=unset new ses=1166 
+----
+type=SYSCALL msg=audit(05/26/09 10:11:41.744:101) : arch=i386 syscall=fstat64 success=yes exit=0 a0=0x3 a1=0x553ac0 a2=0x552ff4 a3=0xbfc5eab0 items=0 ppid=2671 pid=2714 auid=root uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=1 comm=ls exe=/bin/ls subj=system_u:object_r:unlabeled_t:s0 key=(null) 
+type=AVC msg=audit(05/26/09 10:11:41.744:101) : avc: denied { getattr } for pid=2714 comm=ls path=/usr/lib/locale/locale-archive dev=dm-0 ino=353593 scontext=system_u:object_r:unlabeled_t:s0 tcontext=system_u:object_r:locale_t:s0 tclass=file 
+----
+type=MMAP msg=audit(01/08/14 06:53:40.991:2159) : fd=6 flags=MAP_PRIVATE|MAP_DENYWRITE 

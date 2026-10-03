@@ -1,0 +1,86 @@
+### aureport --summary
+
+Summary Report
+======================
+Range of time in logs: 04/22/17 21:25:01.818 - 04/25/18 13:28:53.080
+Selected time for report: 04/22/17 21:25:01 - 04/25/18 13:28:53.080
+Number of changes in configuration: 0
+Number of changes to accounts, groups, or roles: 0
+Number of logins: 1
+Number of failed logins: 1
+Number of authentications: 0
+Number of failed authentications: 0
+Number of users: 2
+Number of terminals: 2
+Number of host names: 2
+Number of executables: 1
+Number of commands: 0
+Number of files: 0
+Number of AVC's: 0
+Number of MAC events: 0
+Number of failed syscalls: 0
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 0
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 0
+Number of process IDs: 2
+Number of events: 2
+
+### aureport --login
+
+Login Report
+============================================
+# date time auid host term exe success event
+============================================
+1. 04/22/17 21:25:01 (invalid user) 179.38.151.221 sshd /usr/sbin/sshd no 19955
+2. 04/21/17 21:39:57 unknown(1001) 72.83.230.100 /dev/pts/1 /usr/sbin/sshd yes 12651
+### aureport --auth
+
+Authentication Report
+============================================
+# date time acct host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --mods
+
+Account Modifications Report
+=================================================
+# date time auid addr term exe acct success event
+=================================================
+<no events of interest were found>
+
+### aureport --executable
+
+Executable Report
+====================================
+# date time exe term host auid event
+====================================
+1. 04/22/17 21:25:01 /usr/sbin/sshd sshd 179.38.151.221 unset 19955
+2. 04/21/17 21:39:57 /usr/sbin/sshd /dev/pts/1 72.83.230.100 unknown(1001) 12651
+### aureport --syscall
+
+Syscall Report
+=======================================
+# date time syscall pid comm auid event
+=======================================
+<no events of interest were found>
+
+### aureport --comm
+
+Command Report
+====================================
+# date time comm term host auid event
+=====================================
+<no events of interest were found>
+
+### aureport --host
+
+Host Report
+===================================
+# date time host syscall auid event
+===================================
+1. 04/22/17 21:25:01 179.38.151.221 ? unset 19955
+2. 04/21/17 21:39:57 72.83.230.100 ? unknown(1001) 12651

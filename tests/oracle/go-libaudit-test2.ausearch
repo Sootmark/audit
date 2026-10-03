@@ -1,0 +1,17 @@
+----
+type=PATH msg=audit(01/28/07 21:58:13.977:293) : item=0 name=maildrop inode=14911367 dev=03:07 mode=dir,730 ouid=unknown(890) ogid=unknown(891) rdev=00:00 obj=system_u:object_r:postfix_spool_maildrop_t:s0 
+type=CWD msg=audit(01/28/07 21:58:13.977:293) :  cwd=/var/spool/postfix 
+type=SYSCALL msg=audit(01/28/07 21:58:13.977:293) : arch=x86_64 syscall=open success=no exit=EACCES(Permission denied) a0=0x5555665d91b0 a1=O_RDONLY|O_NONBLOCK|O_DIRECTORY a2=0x5555665d91b8 a3=0x0 items=1 ppid=2013 pid=13010 auid=unset uid=unknown(890) gid=unknown(890) euid=unknown(890) suid=unknown(890) fsuid=unknown(890) egid=unknown(890) sgid=unknown(890) fsgid=unknown(890) tty=(none) comm=pickup exe=/usr/libexec/postfix/pickup subj=system_u:system_r:postfix_pickup_t:s0 key=(null) 
+type=AVC msg=audit(01/28/07 21:58:13.977:293) : avc:  denied  { read } for  pid=13010 comm=pickup name=maildrop dev=hda7 ino=14911367 scontext=system_u:system_r:postfix_pickup_t:s0 tcontext=system_u:object_r:postfix_spool_maildrop_t:s0 tclass=dir 
+----
+type=USER_ACCT msg=audit(01/28/07 22:00:01.340:294) : user pid=13015 uid=root auid=unset subj=system_u:system_r:crond_t:s0-s0:c0.c1023 msg='PAM: accounting acct=root : exe=/usr/sbin/crond hostname=? addr=? terminal=cron res=success' 
+----
+type=CRED_ACQ msg=audit(01/28/07 22:00:01.342:295) : user pid=13015 uid=root auid=unset subj=system_u:system_r:crond_t:s0-s0:c0.c1023 msg='PAM: setcred acct=root : exe=/usr/sbin/crond hostname=? addr=? terminal=cron res=success' 
+----
+type=LOGIN msg=audit(01/28/07 22:00:01.343:296) : login pid=13015 uid=root old auid=unset new auid=root 
+----
+type=USER_START msg=audit(01/28/07 22:00:01.344:297) : user pid=13015 uid=root auid=root subj=system_u:system_r:crond_t:s0-s0:c0.c1023 msg='PAM: session open acct=root : exe=/usr/sbin/crond (hostname=?, addr=?  terminal=cron res=success)' 
+----
+type=CRED_DISP msg=audit(01/28/07 22:00:01.364:298) : user pid=13015 uid=root auid=root subj=system_u:system_r:crond_t:s0-s0:c0.c1023 msg='PAM: setcred acct=root : exe=/usr/sbin/crond (hostname=?, addr=?  terminal=cron res=success)' 
+----
+type=USER_END msg=audit(01/28/07 22:00:01.366:299) : user pid=13015 uid=root auid=root subj=system_u:system_r:crond_t:s0-s0:c0.c1023 msg='PAM: session close acct=root : exe=/usr/sbin/crond (hostname=?, addr=?  terminal=cron res=success)' 

@@ -1,0 +1,10 @@
+----
+type=SYSCALL msg=audit(04/12/17 22:48:09.295:4294967294) : arch=x86_64 syscall=connect success=no exit=EINPROGRESS(Operation now in progress) a0=0x6 a1=0x7ffed2893080 a2=0x10 a3=0xfe items=0 ppid=1 pid=1172 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=google_accounts exe=/usr/bin/python2.7;58d1ccfb (deleted) subj=system_u:system_r:unconfined_service_t:s0 key=(null) 
+----
+type=SYSCALL msg=audit(04/12/17 22:48:18.883:0) : arch=x86_64 syscall=connect success=yes exit=0 a0=0x15 a1=0x7ffd83722200 a2=0x6e a3=0xea60 items=1 ppid=1 pid=1229 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=master exe=/usr/libexec/postfix/master subj=system_u:system_r:postfix_master_t:s0 key=(null) 
+----
+type=SYSCALL msg=audit(04/12/17 22:48:18.883:1) : arch=x86_64 syscall=accept success=yes exit=11 a0=0x6 a1=0x0 a2=0x0 a3=0x186a0 items=0 ppid=1229 pid=12992 auid=unset uid=unknown(89) gid=unknown(89) euid=unknown(89) suid=unknown(89) fsuid=unknown(89) egid=unknown(89) sgid=unknown(89) fsgid=unknown(89) tty=(none) ses=unset comm=pickup exe=/usr/libexec/postfix/pickup subj=system_u:system_r:postfix_pickup_t:s0 key=(null) 
+----
+type=SYSCALL msg=audit(04/12/17 22:48:18.883:4294967295) : arch=x86_64 syscall=execve success=yes exit=0 a0=0x153ad00 a1=0x1506260 a2=0x14faeb0 a3=0x7ffcc4582df0 items=2 ppid=12041 pid=13392 auid=unknown(1000) uid=unknown(1000) gid=unknown(1001) euid=unknown(1000) suid=unknown(1000) fsuid=unknown(1000) egid=unknown(1001) sgid=unknown(1001) fsgid=unknown(1001) tty=pts1 ses=802 comm=cat exe=/usr/bin/cat subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key=user_commands 
+----
+type=SYSCALL msg=audit(04/12/17 22:48:18.884:2) : arch=x86_64 syscall=accept success=yes exit=11 a0=0x6 a1=0x0 a2=0x0 a3=0x186a0 items=0 ppid=1229 pid=12992 auid=unset uid=unknown(89) gid=unknown(89) euid=unknown(89) suid=unknown(89) fsuid=unknown(89) egid=unknown(89) sgid=unknown(89) fsgid=unknown(89) tty=(none) ses=unset comm=pickup exe=/usr/libexec/postfix/pickup subj=system_u:system_r:postfix_pickup_t:s0 key=(null) 

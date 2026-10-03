@@ -1,0 +1,4 @@
+----
+type=USER_LOGIN msg=audit(04/22/17 21:25:01.818:19955) : pid=12635 uid=root auid=unset ses=unset msg='op=login acct=(invalid user) exe=/usr/sbin/sshd hostname=? addr=179.38.151.221 terminal=sshd res=failed' 
+----
+type=USER_LOGIN msg=audit(04/21/17 21:39:57.778:12651) : pid=11396 uid=root auid=unknown(1001) ses=36 msg='op=login id=unknown(1001) exe=/usr/sbin/sshd hostname=72.83.230.100 addr=72.83.230.100 terminal=/dev/pts/1 res=success' 

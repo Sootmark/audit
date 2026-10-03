@@ -1,0 +1,4 @@
+----
+type=USER_CMD msg=audit(03/07/17 04:59:29.030:19469538) : user pid=3027 uid=unknown(497) auid=unknown(700) ses=11988 msg='cwd=/ cmd=/usr/lib64/nagios/plugins/check_asterisk_sip_peers -p 107 terminal=? res=success' 
+----
+type=SYSCALL msg=audit(03/31/17 21:29:12.404:20614537) : arch=x86_64 syscall=sendto success=yes exit=464 a0=0x9 a1=0x7f56476614b0 a2=0x1d0 a3=0x0 items=0 ppid=1240 pid=1287 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=charon exe=/usr/libexec/strongswan/charon (deleted) key=(null) 

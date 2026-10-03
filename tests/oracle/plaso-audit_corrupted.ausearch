@@ -1,0 +1,10 @@
+----
+type=PROCTITLE msg=audit(07/08/26 02:49:34.713:900) : proctitle=/bin/cað 
+----
+type=EXECVE msg=audit(07/08/26 02:49:34.713:901) : argc=2 a0=/bin/cat a1=ÿþ 
+----
+type=PATH msg=audit(07/08/26 02:49:34.713:902) : item=0 name=/etc/shadow mode=000,000 ouid=root 
+----
+type=EXECVE msg=audit(07/08/26 02:49:34.713:903) : argc=x a0=/bin/ls 
+----
+type=USER_AUTH msg=audit(07/08/26 02:49:34.713:904) : pid=1 uid=root msg='op=PAM:authentication acct=root res=maybe' 

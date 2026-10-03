@@ -1,0 +1,45 @@
+----
+type=PROCTITLE msg=audit(07/08/26 02:49:34.713:500) : proctitle=id 
+type=PATH msg=audit(07/08/26 02:49:34.713:500) : item=1 name=/lib64/ld-linux-x86-64.so.2 inode=419731 dev=08:02 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(07/08/26 02:49:34.713:500) : item=0 name=/usr/bin/id inode=393631 dev=08:02 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(07/08/26 02:49:34.713:500) : cwd=/home/ubuntu 
+type=EXECVE msg=audit(07/08/26 02:49:34.713:500) : argc=1 a0=id 
+type=SYSCALL msg=audit(07/08/26 02:49:34.713:500) : arch=x86_64 syscall=execve success=yes exit=0 a0=0x5d54aa509640 a1=0x5d54aa5133c0 a2=0x5d54aa50fb30 a3=0x21 items=2 ppid=3867 pid=3917 auid=unknown(1000) uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=17 comm=id exe=/usr/lib/cargo/bin/coreutils/id subj=unconfined key=specimen_exec 
+----
+type=PROCTITLE msg=audit(07/08/26 02:49:34.770:505) : proctitle=/bin/cat /tmp/my report.txt 
+type=PATH msg=audit(07/08/26 02:49:34.770:505) : item=1 name=/lib64/ld-linux-x86-64.so.2 inode=419731 dev=08:02 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(07/08/26 02:49:34.770:505) : item=0 name=/bin/cat inode=393631 dev=08:02 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(07/08/26 02:49:34.770:505) : cwd=/home/ubuntu 
+type=EXECVE msg=audit(07/08/26 02:49:34.770:505) : argc=2 a0=/bin/cat a1=/tmp/my report.txt 
+type=SYSCALL msg=audit(07/08/26 02:49:34.770:505) : arch=x86_64 syscall=execve success=yes exit=0 a0=0x5d54aa516580 a1=0x5d54aa50ff10 a2=0x5d54aa50fb30 a3=0x21 items=2 ppid=3867 pid=3922 auid=unknown(1000) uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=17 comm=cat exe=/usr/lib/cargo/bin/coreutils/cat subj=unconfined key=specimen_exec 
+----
+type=PROCTITLE msg=audit(07/08/26 02:49:34.785:506) : proctitle=/bin/echo hello world from specimen 
+type=PATH msg=audit(07/08/26 02:49:34.785:506) : item=1 name=/lib64/ld-linux-x86-64.so.2 inode=419731 dev=08:02 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(07/08/26 02:49:34.785:506) : item=0 name=/bin/echo inode=393631 dev=08:02 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(07/08/26 02:49:34.785:506) : cwd=/home/ubuntu 
+type=EXECVE msg=audit(07/08/26 02:49:34.785:506) : argc=2 a0=/bin/echo a1=hello world from specimen 
+type=SYSCALL msg=audit(07/08/26 02:49:34.785:506) : arch=x86_64 syscall=execve success=yes exit=0 a0=0x5d54aa509640 a1=0x5d54aa516dd0 a2=0x5d54aa50fb30 a3=0x21 items=2 ppid=3867 pid=3923 auid=unknown(1000) uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=17 comm=echo exe=/usr/lib/cargo/bin/coreutils/echo subj=unconfined key=specimen_exec 
+----
+type=DEL_USER msg=audit(07/08/26 02:49:34.807:508) : pid=3924 uid=root auid=unknown(1000) ses=17 subj=unconfined msg='op=deleting-user-not-found acct=specimenuser exe=/usr/sbin/userdel hostname=? addr=? terminal=? res=failed' 
+----
+type=ADD_USER msg=audit(07/08/26 02:49:34.871:512) : pid=3925 uid=root auid=unknown(1000) ses=17 subj=unconfined msg='op=add-user acct=specimenuser exe=/usr/sbin/useradd hostname=? addr=? terminal=? res=success' 
+----
+type=PROCTITLE msg=audit(07/08/26 02:49:34.942:519) : proctitle=su - specimenuser -c id 
+type=PATH msg=audit(07/08/26 02:49:34.942:519) : item=1 name=/lib64/ld-linux-x86-64.so.2 inode=419731 dev=08:02 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(07/08/26 02:49:34.942:519) : item=0 name=/usr/bin/su inode=394249 dev=08:02 mode=file,suid,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(07/08/26 02:49:34.942:519) : cwd=/home/ubuntu 
+type=EXECVE msg=audit(07/08/26 02:49:34.942:519) : argc=5 a0=su a1=- a2=specimenuser a3=-c a4=id 
+type=SYSCALL msg=audit(07/08/26 02:49:34.942:519) : arch=x86_64 syscall=execve success=yes exit=0 a0=0x5d54aa516930 a1=0x5d54aa5160e0 a2=0x5d54aa50fb30 a3=0x21 items=2 ppid=3867 pid=3930 auid=unknown(1000) uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=17 comm=su exe=/usr/bin/su subj=unconfined key=specimen_exec 
+----
+type=USER_AUTH msg=audit(07/08/26 02:49:34.952:520) : pid=3930 uid=root auid=unknown(1000) ses=17 subj=unconfined msg='op=PAM:authentication grantors=pam_rootok acct=specimenuser exe=/usr/bin/su hostname=? addr=? terminal=? res=success' 
+----
+type=PROCTITLE msg=audit(07/08/26 02:49:34.961:522) : proctitle=/usr/sbin/unix_chkpwd specimenuser chkexpiry 
+type=PATH msg=audit(07/08/26 02:49:34.961:522) : item=0 name=/etc/shadow inode=1050352 dev=08:02 mode=file,640 ouid=root ogid=shadow rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(07/08/26 02:49:34.961:522) : cwd=/home/ubuntu 
+type=SYSCALL msg=audit(07/08/26 02:49:34.961:522) : arch=x86_64 syscall=openat success=yes exit=3 a0=AT_FDCWD a1=0x76d1475df615 a2=O_RDONLY|O_CLOEXEC a3=0x0 items=1 ppid=3930 pid=3931 auid=unknown(1000) uid=root gid=root euid=root suid=root fsuid=root egid=shadow sgid=shadow fsgid=shadow tty=(none) ses=17 comm=unix_chkpwd exe=/usr/sbin/unix_chkpwd subj=unix-chkpwd key=specimen_watch 
+----
+type=USER_ACCT msg=audit(07/08/26 02:49:34.962:523) : pid=3930 uid=root auid=unknown(1000) ses=17 subj=unconfined msg='op=PAM:accounting grantors=pam_permit acct=specimenuser exe=/usr/bin/su hostname=? addr=? terminal=? res=success' 
+----
+type=CRED_ACQ msg=audit(07/08/26 02:49:34.968:524) : pid=3930 uid=root auid=unknown(1000) ses=17 subj=unconfined msg='op=PAM:setcred grantors=pam_rootok acct=specimenuser exe=/usr/bin/su hostname=? addr=? terminal=? res=success' 
+----
+type=USER_START msg=audit(07/08/26 02:49:34.973:526) : pid=3930 uid=root auid=unknown(1000) ses=17 subj=unconfined msg='op=PAM:session_open grantors=pam_keyinit,pam_env,pam_env,pam_mail,pam_limits,pam_permit,pam_umask,pam_unix,pam_systemd acct=specimenuser exe=/usr/bin/su hostname=? addr=? terminal=? res=success' 

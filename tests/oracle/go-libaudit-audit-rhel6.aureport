@@ -1,0 +1,83 @@
+### aureport --summary
+
+Summary Report
+======================
+Range of time in logs: 03/31/17 21:29:12.404 - 03/31/17 21:29:12.404
+Selected time for report: 03/31/17 21:29:12 - 03/31/17 21:29:12.404
+Number of changes in configuration: 0
+Number of changes to accounts, groups, or roles: 0
+Number of logins: 0
+Number of failed logins: 0
+Number of authentications: 0
+Number of failed authentications: 0
+Number of users: 2
+Number of terminals: 2
+Number of host names: 0
+Number of executables: 1
+Number of commands: 1
+Number of files: 0
+Number of AVC's: 0
+Number of MAC events: 0
+Number of failed syscalls: 0
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 0
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 0
+Number of process IDs: 2
+Number of events: 2
+
+### aureport --login
+
+Login Report
+============================================
+# date time auid host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --auth
+
+Authentication Report
+============================================
+# date time acct host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --mods
+
+Account Modifications Report
+=================================================
+# date time auid addr term exe acct success event
+=================================================
+<no events of interest were found>
+
+### aureport --executable
+
+Executable Report
+====================================
+# date time exe term host auid event
+====================================
+1. 03/31/17 21:29:12 /usr/libexec/strongswan/charon (deleted) (none) ? unset 20614537
+### aureport --syscall
+
+Syscall Report
+=======================================
+# date time syscall pid comm auid event
+=======================================
+1. 03/31/17 21:29:12 sendto 1287 charon unset 20614537
+### aureport --comm
+
+Command Report
+====================================
+# date time comm term host auid event
+=====================================
+1. 03/31/17 21:29:12 charon (none) ? unset 20614537
+### aureport --host
+
+Host Report
+===================================
+# date time host syscall auid event
+===================================
+<no events of interest were found>
+

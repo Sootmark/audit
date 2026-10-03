@@ -1,0 +1,104 @@
+### aureport --summary
+
+Summary Report
+======================
+Range of time in logs: 07/08/26 02:49:34.713 - 07/08/26 02:49:34.973
+Selected time for report: 07/08/26 02:49:34 - 07/08/26 02:49:34.973
+Number of changes in configuration: 0
+Number of changes to accounts, groups, or roles: 2
+Number of logins: 0
+Number of failed logins: 0
+Number of authentications: 1
+Number of failed authentications: 0
+Number of users: 1
+Number of terminals: 2
+Number of host names: 1
+Number of executables: 7
+Number of commands: 5
+Number of files: 6
+Number of AVC's: 0
+Number of MAC events: 0
+Number of failed syscalls: 0
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 0
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 2
+Number of process IDs: 7
+Number of events: 11
+
+### aureport --login
+
+Login Report
+============================================
+# date time auid host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --auth
+
+Authentication Report
+============================================
+# date time acct host term exe success event
+============================================
+1. 07/08/26 02:49:34 specimenuser ? ? /usr/bin/su yes 520
+### aureport --mods
+
+Account Modifications Report
+=================================================
+# date time auid addr term exe acct success event
+=================================================
+1. 07/08/26 02:49:34 unknown(1000) ? ? /usr/sbin/userdel specimenuser no 508
+2. 07/08/26 02:49:34 unknown(1000) ? ? /usr/sbin/useradd specimenuser yes 512
+### aureport --executable
+
+Executable Report
+====================================
+# date time exe term host auid event
+====================================
+1. 07/08/26 02:49:34 /usr/lib/cargo/bin/coreutils/id (none) ? unknown(1000) 500
+2. 07/08/26 02:49:34 /usr/lib/cargo/bin/coreutils/cat (none) ? unknown(1000) 505
+3. 07/08/26 02:49:34 /usr/lib/cargo/bin/coreutils/echo (none) ? unknown(1000) 506
+4. 07/08/26 02:49:34 /usr/sbin/userdel ? ? unknown(1000) 508
+5. 07/08/26 02:49:34 /usr/sbin/useradd ? ? unknown(1000) 512
+6. 07/08/26 02:49:34 /usr/bin/su (none) ? unknown(1000) 519
+7. 07/08/26 02:49:34 /usr/bin/su ? ? unknown(1000) 520
+8. 07/08/26 02:49:34 /usr/sbin/unix_chkpwd (none) ? unknown(1000) 522
+9. 07/08/26 02:49:34 /usr/bin/su ? ? unknown(1000) 523
+10. 07/08/26 02:49:34 /usr/bin/su ? ? unknown(1000) 524
+11. 07/08/26 02:49:34 /usr/bin/su ? ? unknown(1000) 526
+### aureport --syscall
+
+Syscall Report
+=======================================
+# date time syscall pid comm auid event
+=======================================
+1. 07/08/26 02:49:34 execve 3917 id unknown(1000) 500
+2. 07/08/26 02:49:34 execve 3922 cat unknown(1000) 505
+3. 07/08/26 02:49:34 execve 3923 echo unknown(1000) 506
+4. 07/08/26 02:49:34 execve 3930 su unknown(1000) 519
+5. 07/08/26 02:49:34 openat 3931 unix_chkpwd unknown(1000) 522
+### aureport --comm
+
+Command Report
+====================================
+# date time comm term host auid event
+=====================================
+1. 07/08/26 02:49:34 id (none) ? unknown(1000) 500
+2. 07/08/26 02:49:34 cat (none) ? unknown(1000) 505
+3. 07/08/26 02:49:34 echo (none) ? unknown(1000) 506
+4. 07/08/26 02:49:34 su (none) ? unknown(1000) 519
+5. 07/08/26 02:49:34 unix_chkpwd (none) ? unknown(1000) 522
+### aureport --host
+
+Host Report
+===================================
+# date time host syscall auid event
+===================================
+1. 07/08/26 02:49:34 ? ? unknown(1000) 508
+2. 07/08/26 02:49:34 ? ? unknown(1000) 512
+3. 07/08/26 02:49:34 ? ? unknown(1000) 520
+4. 07/08/26 02:49:34 ? ? unknown(1000) 523
+5. 07/08/26 02:49:34 ? ? unknown(1000) 524
+6. 07/08/26 02:49:34 ? ? unknown(1000) 526

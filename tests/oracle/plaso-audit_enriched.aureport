@@ -1,0 +1,110 @@
+### aureport --summary
+
+Summary Report
+======================
+Range of time in logs: 07/07/26 08:56:13.076 - 07/28/26 09:56:37.053
+Selected time for report: 07/07/26 08:56:13 - 07/28/26 09:56:37.053
+Number of changes in configuration: 0
+Number of changes to accounts, groups, or roles: 2
+Number of logins: 0
+Number of failed logins: 0
+Number of authentications: 0
+Number of failed authentications: 1
+Number of users: 3
+Number of terminals: 3
+Number of host names: 2
+Number of executables: 9
+Number of commands: 6
+Number of files: 5
+Number of AVC's: 0
+Number of MAC events: 1
+Number of failed syscalls: 0
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 0
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 4
+Number of process IDs: 9
+Number of events: 14
+
+### aureport --login
+
+Login Report
+============================================
+# date time auid host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --auth
+
+Authentication Report
+============================================
+# date time acct host term exe success event
+============================================
+1. 07/07/26 08:56:53 root 172.23.112.1 ssh /usr/libexec/openssh/sshd-session no 441
+### aureport --mods
+
+Account Modifications Report
+=================================================
+# date time auid addr term exe acct success event
+=================================================
+1. 07/07/26 08:56:13 root ? ? /usr/bin/userdel specimenuser no 399
+2. 07/07/26 08:56:13 root ? ? /usr/bin/useradd specimenuser yes 408
+### aureport --executable
+
+Executable Report
+====================================
+# date time exe term host auid event
+====================================
+1. 07/07/26 08:56:13 /usr/bin/userdel ? ? root 399
+2. 07/07/26 08:56:13 /usr/bin/useradd ? ? root 408
+3. 07/07/26 08:56:13 /usr/bin/sudo ? ? root 423
+4. 07/07/26 08:56:53 /usr/libexec/openssh/sshd-session ssh 172.23.112.1 unset 441
+5. 07/07/26 08:56:53 /usr/libexec/openssh/sshd-session ssh 172.23.112.1 unset 444
+6. 07/07/26 08:56:53 /usr/libexec/openssh/sshd-session ssh 172.23.112.1 unset 446
+7. 07/07/26 08:56:53 /usr/libexec/openssh/sshd-session (none) ? root 447
+8. 07/07/26 08:56:53 /usr/libexec/openssh/sshd-session ssh 172.23.112.1 root 448
+9. 07/07/26 08:56:53 /usr/libexec/openssh/sshd-session ssh 172.23.112.1 root 449
+10. 07/07/26 08:57:41 /usr/bin/id (none) ? root 485
+11. 07/07/26 08:57:41 /usr/bin/bash (none) ? root 487
+12. 07/07/26 09:23:37 /usr/bin/cat (none) ? root 735
+13. 07/26/26 13:04:23 /usr/lib/cargo/bin/coreutils/chmod (none) ? ubuntu 371
+14. 07/28/26 09:56:37 /usr/lib/systemd/systemd ? ? unset 260
+### aureport --syscall
+
+Syscall Report
+=======================================
+# date time syscall pid comm auid event
+=======================================
+1. 07/07/26 08:56:53 write 2124 sshd-session root 447
+2. 07/07/26 08:57:41 execve 2219 id root 485
+3. 07/07/26 08:57:41 execve 2221 sh root 487
+4. 07/07/26 09:23:37 execve 2525 cat root 735
+5. 07/26/26 13:04:23 chmod 2457 chmod ubuntu 371
+### aureport --comm
+
+Command Report
+====================================
+# date time comm term host auid event
+=====================================
+1. 07/07/26 08:56:53 sshd-session (none) ? root 447
+2. 07/07/26 08:57:41 id (none) ? root 485
+3. 07/07/26 08:57:41 sh (none) ? root 487
+4. 07/07/26 09:23:37 cat (none) ? root 735
+5. 07/26/26 13:04:23 chmod (none) ? ubuntu 371
+6. 07/28/26 09:56:37 systemd ? ? unset 260
+### aureport --host
+
+Host Report
+===================================
+# date time host syscall auid event
+===================================
+1. 07/07/26 08:56:13 ? ? root 399
+2. 07/07/26 08:56:13 ? ? root 408
+3. 07/07/26 08:56:53 172.23.112.1 ? unset 441
+4. 07/07/26 08:56:53 172.23.112.1 ? unset 444
+5. 07/07/26 08:56:53 172.23.112.1 ? unset 446
+6. 07/07/26 08:56:53 172.23.112.1 ? root 448
+7. 07/07/26 08:56:53 172.23.112.1 ? root 449
+8. 07/28/26 09:56:37 ? ? unset 260

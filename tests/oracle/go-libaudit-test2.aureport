@@ -1,0 +1,91 @@
+### aureport --summary
+
+Summary Report
+======================
+Range of time in logs: 01/28/07 21:58:13.977 - 01/28/07 22:00:01.366
+Selected time for report: 01/28/07 21:58:13 - 01/28/07 22:00:01.366
+Number of changes in configuration: 0
+Number of changes to accounts, groups, or roles: 0
+Number of logins: 0
+Number of failed logins: 0
+Number of authentications: 0
+Number of failed authentications: 0
+Number of users: 2
+Number of terminals: 2
+Number of host names: 1
+Number of executables: 2
+Number of commands: 1
+Number of files: 1
+Number of AVC's: 1
+Number of MAC events: 0
+Number of failed syscalls: 1
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 0
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 0
+Number of process IDs: 2
+Number of events: 7
+
+### aureport --login
+
+Login Report
+============================================
+# date time auid host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --auth
+
+Authentication Report
+============================================
+# date time acct host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --mods
+
+Account Modifications Report
+=================================================
+# date time auid addr term exe acct success event
+=================================================
+<no events of interest were found>
+
+### aureport --executable
+
+Executable Report
+====================================
+# date time exe term host auid event
+====================================
+1. 01/28/07 21:58:13 /usr/libexec/postfix/pickup (none) ? unset 293
+2. 01/28/07 22:00:01 /usr/sbin/crond cron ? unset 294
+3. 01/28/07 22:00:01 /usr/sbin/crond cron ? unset 295
+4. 01/28/07 22:00:01 /usr/sbin/crond cron ? root 297
+5. 01/28/07 22:00:01 /usr/sbin/crond cron ? root 298
+6. 01/28/07 22:00:01 /usr/sbin/crond cron ? root 299
+### aureport --syscall
+
+Syscall Report
+=======================================
+# date time syscall pid comm auid event
+=======================================
+1. 01/28/07 21:58:13 open 13010 pickup unset 293
+### aureport --comm
+
+Command Report
+====================================
+# date time comm term host auid event
+=====================================
+1. 01/28/07 21:58:13 pickup (none) ? unset 293
+### aureport --host
+
+Host Report
+===================================
+# date time host syscall auid event
+===================================
+1. 01/28/07 22:00:01 ? ? unset 294
+2. 01/28/07 22:00:01 ? ? unset 295
+3. 01/28/07 22:00:01 ? ? root 297
+4. 01/28/07 22:00:01 ? ? root 298
+5. 01/28/07 22:00:01 ? ? root 299

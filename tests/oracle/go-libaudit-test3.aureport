@@ -1,0 +1,103 @@
+### aureport --summary
+
+Summary Report
+======================
+Range of time in logs: 01/03/16 00:37:51.394 - 10/06/17 15:40:39.922
+Selected time for report: 01/03/16 00:37:51 - 10/06/17 15:40:39.922
+Number of changes in configuration: 0
+Number of changes to accounts, groups, or roles: 1
+Number of logins: 0
+Number of failed logins: 0
+Number of authentications: 0
+Number of failed authentications: 0
+Number of users: 2
+Number of terminals: 3
+Number of host names: 1
+Number of executables: 3
+Number of commands: 2
+Number of files: 0
+Number of AVC's: 0
+Number of MAC events: 0
+Number of failed syscalls: 0
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 0
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 0
+Number of process IDs: 3
+Number of events: 10
+
+### aureport --login
+
+Login Report
+============================================
+# date time auid host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --auth
+
+Authentication Report
+============================================
+# date time acct host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --mods
+
+Account Modifications Report
+=================================================
+# date time auid addr term exe acct success event
+=================================================
+1. 01/03/16 00:37:51 unknown(1000) ? pts/0 /usr/sbin/useradd frodo yes 194894
+### aureport --executable
+
+Executable Report
+====================================
+# date time exe term host auid event
+====================================
+1. 01/03/16 00:37:51 /usr/bin/bash pts0 ? unknown(1000) 194433
+2. 01/03/16 00:37:51 /usr/sbin/sshd (none) ? unknown(1000) 194435
+3. 01/03/16 00:37:51 /usr/bin/bash pts0 ? unknown(1000) 194436
+4. 01/03/16 00:37:51 /usr/sbin/sshd (none) ? unknown(1000) 194437
+5. 01/03/16 00:37:51 /usr/bin/bash pts0 ? unknown(1000) 194438
+6. 01/03/16 00:37:51 /usr/sbin/sshd (none) ? unknown(1000) 194439
+7. 01/03/16 00:37:51 /usr/sbin/sshd (none) ? unknown(1000) 194440
+8. 01/03/16 00:37:51 /usr/sbin/useradd pts/0 ? unknown(1000) 194894
+9. 06/08/15 17:48:47 /usr/sbin/sshd ? ? unknown(20003) 10262
+### aureport --syscall
+
+Syscall Report
+=======================================
+# date time syscall pid comm auid event
+=======================================
+1. 01/03/16 00:37:51 rt_sigaction 1321 bash unknown(1000) 194433
+2. 01/03/16 00:37:51 select 1281 sshd unknown(1000) 194435
+3. 01/03/16 00:37:51 rt_sigaction 1321 bash unknown(1000) 194436
+4. 01/03/16 00:37:51 rt_sigprocmask 1281 sshd unknown(1000) 194437
+5. 01/03/16 00:37:51 rt_sigaction 1321 bash unknown(1000) 194438
+6. 01/03/16 00:37:51 rt_sigprocmask 1281 sshd unknown(1000) 194439
+7. 01/03/16 00:37:51 clock_gettime 1281 sshd unknown(1000) 194440
+8. 06/08/15 17:48:47 getpgid 11217 sshd unknown(20003) 10262
+### aureport --comm
+
+Command Report
+====================================
+# date time comm term host auid event
+=====================================
+1. 01/03/16 00:37:51 bash pts0 ? unknown(1000) 194433
+2. 01/03/16 00:37:51 sshd (none) ? unknown(1000) 194435
+3. 01/03/16 00:37:51 bash pts0 ? unknown(1000) 194436
+4. 01/03/16 00:37:51 sshd (none) ? unknown(1000) 194437
+5. 01/03/16 00:37:51 bash pts0 ? unknown(1000) 194438
+6. 01/03/16 00:37:51 sshd (none) ? unknown(1000) 194439
+7. 01/03/16 00:37:51 sshd (none) ? unknown(1000) 194440
+8. 06/08/15 17:48:47 sshd ? ? unknown(20003) 10262
+### aureport --host
+
+Host Report
+===================================
+# date time host syscall auid event
+===================================
+1. 01/03/16 00:37:51 ? ? unknown(1000) 194894

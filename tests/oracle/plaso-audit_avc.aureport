@@ -1,0 +1,90 @@
+### aureport --summary
+
+Summary Report
+======================
+Range of time in logs: 08/02/26 16:17:15.949 - 08/02/26 16:17:47.492
+Selected time for report: 08/02/26 16:17:15 - 08/02/26 16:17:47.492
+Number of changes in configuration: 0
+Number of changes to accounts, groups, or roles: 0
+Number of logins: 0
+Number of failed logins: 0
+Number of authentications: 0
+Number of failed authentications: 0
+Number of users: 0
+Number of terminals: 0
+Number of host names: 0
+Number of executables: 0
+Number of commands: 5
+Number of files: 3
+Number of AVC's: 6
+Number of MAC events: 0
+Number of failed syscalls: 0
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 0
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 0
+Number of process IDs: 4
+Number of events: 6
+
+### aureport --login
+
+Login Report
+============================================
+# date time auid host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --auth
+
+Authentication Report
+============================================
+# date time acct host term exe success event
+============================================
+<no events of interest were found>
+
+### aureport --mods
+
+Account Modifications Report
+=================================================
+# date time auid addr term exe acct success event
+=================================================
+<no events of interest were found>
+
+### aureport --executable
+
+Executable Report
+====================================
+# date time exe term host auid event
+====================================
+<no events of interest were found>
+
+### aureport --syscall
+
+Syscall Report
+=======================================
+# date time syscall pid comm auid event
+=======================================
+<no events of interest were found>
+
+### aureport --comm
+
+Command Report
+====================================
+# date time comm term host auid event
+=====================================
+1. 08/02/26 16:17:15 rpm ? ? unknown(-2) 766
+2. 08/02/26 16:17:15 rpm ? ? unknown(-2) 767
+3. 08/02/26 16:16:03 runcon ? ? unknown(-2) 476
+4. 08/02/26 16:17:46 systemd-user-ru ? ? unknown(-2) 788
+5. 08/02/26 16:17:47 sshd-session ? ? unknown(-2) 832
+6. 08/02/26 16:17:47 bash ? ? unknown(-2) 833
+### aureport --host
+
+Host Report
+===================================
+# date time host syscall auid event
+===================================
+<no events of interest were found>
+

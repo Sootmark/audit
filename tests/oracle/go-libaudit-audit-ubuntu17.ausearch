@@ -1,0 +1,2 @@
+----
+type=SYSCALL msg=audit(01/10/18 21:28:41.392:106081) : arch=x86_64 syscall=execve success=yes exit=0 a0=0x55df1048ec88 a1=0x55df1048ec38 a2=0x55df1048ec58 a3=0x1 items=2 ppid=27851 pid=27854 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=grep exe=/bin/grep key=exec key=64bit 
