@@ -1,7 +1,8 @@
-//! plaso's audit log test files (Apache-2.0, `tests/fixtures/plaso/`), read
-//! as plaso's own tests (`tests/parsers/text_plugins/selinux.py`) expect.
-//! plaso counts records; here records are gathered into events, so the
-//! counts are of both.
+//! plaso's audit log test files (Apache-2.0, `tests/fixtures/plaso/`, see
+//! `NOTICE`), read as plaso's own tests
+//! (`tests/parsers/text_plugins/selinux.py`) expect, and as plaso itself
+//! reads them (`tests/oracle/plaso.tsv`). plaso counts records; here
+//! records are gathered into events, so the counts are of both.
 
 use std::fs;
 use std::path::Path;
@@ -308,4 +309,128 @@ fn old_and_odd_lines() {
         Some("/usr/lib/locale/locale-archive")
     );
     assert_eq!(event(&log, 2159).records[0].kind, "UNKNOWN[1323]");
+}
+
+/// What plaso's `text/selinux` parser reads of a record: its names, and
+/// the fields they come from.
+const PLASO_FIELDS: [(&str, &str); 12] = [
+    ("auid", "audit_login_identifier"),
+    ("ses", "audit_session_identifier"),
+    ("exe", "executable"),
+    ("exit", "exit_code"),
+    ("gid", "group_identifier"),
+    ("ppid", "parent_process_identifier"),
+    ("pid", "pid"),
+    ("comm", "process_name"),
+    ("subj", "security_context"),
+    ("success", "success"),
+    ("syscall", "system_call"),
+    ("uid", "user_identifier"),
+];
+
+/// The values `plaso.tsv` identifies a record by.
+const KEYS: [&str; 3] = ["audit_serial=", "audit_type=", "message_body="];
+
+/// A record as `plaso.tsv` identifies it (file, time, serial, type, its
+/// text as written: the line it was read from) and its values under
+/// plaso's names.
+fn plaso_record(
+    name: &str,
+    text: &str,
+    event: &Event,
+    record: &audit::Record,
+) -> (String, Vec<String>) {
+    let line = text.split('\n').nth(record.line - 1).unwrap_or_default();
+    let body = line.split_once("): ").map_or("", |(_, body)| body);
+    let body = body.split('\x1d').next().unwrap_or_default().trim();
+    let mut key = vec![
+        name.to_owned(),
+        time(event).trim_end_matches('Z').to_owned(),
+        format!("audit_serial={}", event.serial),
+        format!("audit_type={}", record.kind),
+    ];
+    if !body.is_empty() {
+        key.push(format!("message_body={body}"));
+    }
+    let values = PLASO_FIELDS
+        .iter()
+        .filter_map(|(ours, plaso)| Some(format!("{plaso}={}", record.get(ours)?)))
+        .collect();
+    (key.join("\t"), values)
+}
+
+/// `plaso.tsv`'s records, as `plaso_record` gives them.
+fn plaso_records() -> Vec<(String, Vec<String>)> {
+    include_str!("oracle/plaso.tsv")
+        .lines()
+        .map(|line| {
+            let fields: Vec<&str> = line.split('\t').collect();
+            let (keys, values): (Vec<&str>, Vec<&str>) = fields[4..]
+                .iter()
+                .partition(|field| KEYS.iter().any(|key| field.starts_with(key)));
+            let key = [&fields[..2], &keys[..]].concat().join("\t");
+            (key, values.into_iter().map(str::to_owned).collect())
+        })
+        .collect()
+}
+
+/// What plaso (the log2timeline/plaso:20260720 image) reads from the same
+/// files with log2timeline (`tests/oracle/plaso.tsv`, see
+/// `tests/oracle/README`): every one of its 53 records found here, at the
+/// same time, with the same serial, type and text, and every value it
+/// reads read the same. plaso reads no record of `audit_enriched.log`: it
+/// takes the file's `0x1d` separators for binary. And it stops reading a
+/// record's values at the first word that isn't `name=value`: an `AVC`'s
+/// (`avc: denied { … } for pid=…`), and `LOGIN`'s after `old`; here those
+/// are read too.
+#[test]
+fn every_record_as_plaso_log2timeline_reads_it() {
+    let mut expected = plaso_records();
+    let mut beyond: Vec<String> = Vec::new();
+    for name in [
+        "audit.log",
+        "audit_avc.log",
+        "audit_corrupted.log",
+        "selinux.log",
+    ] {
+        let data = fs::read(
+            Path::new(env!("CARGO_MANIFEST_DIR"))
+                .join("tests/fixtures/plaso")
+                .join(name),
+        )
+        .unwrap();
+        let text = String::from_utf8_lossy(&data);
+        for event in &parse(&data).events {
+            for record in &event.records {
+                let (key, ours) = plaso_record(name, &text, event, record);
+                let at = expected
+                    .iter()
+                    .position(|(k, _)| *k == key)
+                    .unwrap_or_else(|| panic!("not one of plaso's: {key}"));
+                let (_, theirs) = expected.remove(at);
+                for value in &theirs {
+                    assert!(ours.contains(value), "{key}: {value} read as {ours:?}");
+                }
+                beyond.extend(
+                    ours.iter()
+                        .filter(|v| !theirs.contains(v))
+                        .filter_map(|v| Some(format!("{}:{}", record.kind, v.split_once('=')?.0))),
+                );
+            }
+        }
+    }
+    assert!(expected.is_empty(), "plaso's, not read: {expected:#?}");
+    beyond.sort();
+    beyond.dedup();
+    assert_eq!(
+        beyond,
+        [
+            "AVC:pid",
+            "AVC:process_name",
+            "LOGIN:audit_login_identifier",
+            "LOGIN:audit_session_identifier",
+            "UNDER_SCORE:audit_login_identifier",
+            "UNDER_SCORE:audit_session_identifier",
+        ]
+    );
 }

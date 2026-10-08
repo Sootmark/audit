@@ -1,0 +1,14 @@
+These are plaso's test_data files of the same names (Linux audit logs:
+raw, enriched, SELinux access decisions, damaged, and plaso's SELinux
+sample), under the Apache License 2.0 (LICENSE, in this directory).
+Copyright the plaso authors.
+
+Source: https://github.com/log2timeline/plaso at commit
+91b6849503b125267d00ea134248e4fe59e5479c, unmodified. SHA-256 of each
+file as published:
+
+586392b594dba5f5447583134e504a41601b717c92e3f84fb0ae258f8a1305c8  test_data/audit.log
+0099cdb87164c0c84ecb60ecdac093b5ff958f29e1b9ec041ef1d4f7c7f1f052  test_data/audit_avc.log
+8dcbae2d8aa1f42af5b4fc8afac24f2deeeef710bad114d3acf66d55f89fdc62  test_data/audit_corrupted.log
+cd5b665c56fa474ef502dd7eddf8253e4a5f55a835d917f67f8315ecd6a5f341  test_data/audit_enriched.log
+73704381a54be840bdae7866609c36069d3da314f639879dabddb82450c16d4c  test_data/selinux.log

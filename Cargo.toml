@@ -1,6 +1,6 @@
 [package]
 name = "sootmark-audit"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 rust-version = "1.80"
 description = "Linux audit logs (auditd's audit.log, raw or enriched): records gathered into events, values decoded, command lines, system calls and socket addresses, and the logins, sudo commands, account changes and connections they record."

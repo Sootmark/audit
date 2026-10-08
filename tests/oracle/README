@@ -1,0 +1,21 @@
+*.ausearch, *.aureport: what audit-userspace's own tools make of every
+fixture; see regenerate.sh.
+
+plaso.tsv: what plaso (the log2timeline/plaso:20260720 Docker image) reads
+from the logs in tests/fixtures/plaso/ with its text/selinux parser,
+written by plaso.py from psort's JSON lines; one line per record: the file,
+the time (ISO 8601, UTC), plaso's name for it, the parser, and every value
+plaso read, as name=value (see plaso.py). Written from plaso's output, not
+from this crate. Made on a Debian host with Docker, the five logs in
+/tmp/oracle/in, from the crate root:
+
+  sudo docker run --rm -v /tmp/oracle:/data log2timeline/plaso:20260720 \
+    log2timeline --status_view none -q --parsers 'text/selinux' \
+    --storage-file /data/out.plaso /data/in
+  sudo docker run --rm -v /tmp/oracle:/data log2timeline/plaso:20260720 \
+    psort --status_view none -q -a -o json_line -w /data/out.jsonl /data/out.plaso
+  python3 -I tests/oracle/plaso.py /tmp/oracle/out.jsonl > tests/oracle/plaso.tsv
+
+plaso reads nothing from audit_enriched.log (it takes the 0x1d separators
+for binary) and reports four lines of selinux.log it can't read. psort's -a
+keeps events it would drop as duplicates; none here.
